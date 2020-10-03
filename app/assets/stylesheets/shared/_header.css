@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 2vw;
+  display: flex;
+  background-color: #709365;
+}
+
+.vegan-logo {
+  width: 20vw;
+  margin-right: 10vw;
+}
+
+.loginout {
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+
+  
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  font-family: 'Sansita Swashed', cursive;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+  font-family: 'Sansita Swashed', cursive;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  font-family: 'Sansita Swashed', cursive;
+}
