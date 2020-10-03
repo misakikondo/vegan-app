@@ -2,10 +2,6 @@ main {
   background-color: #709365;
 }
 
-.main-header {
-  /* padding: 30px 100px 30px 100px; */
-}
-
 ul {
   display: flex;
   justify-content: center;
