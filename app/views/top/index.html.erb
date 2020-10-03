@@ -1,9 +1,38 @@
-top#index
+<%= render "shared/header" %>
 
- <% if user_signed_in? %>  
-      <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
-      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "logout" %></li> 
-    <% else %>
-      <li><%= link_to 'Login', new_user_session_path, class: "login" %></li>
-      <li><%= link_to 'Create account', new_user_registration_path, class: "sign-up" %></li>
-    <% end %>
+<main>
+
+  <div class= main-header>
+    <ul>
+      <li><%= link_to 'Recipes', "#", class: "lists" %></li> 
+      <li><%= link_to 'Donation', "#", class: "lists" %></li> 
+      <li><%= link_to 'Products', "#", class: "lists" %></li> 
+    </ul>
+  </div>
+
+  <div class= main-container>
+    <div class= first-container>
+    <%= image_tag 'top0.png.jpeg' %>
+    </div>
+
+    <div class= second-container>
+
+      <div class= second-container-left>
+        <div class= whiteback>
+          <h1>aaa</h1>
+        </div>
+      </div>
+     <div class= second-container-right>
+        <%= image_tag 'top1.png', :size => '610x650'%>
+      </div>
+
+    </div>  
+
+  </div>
+
+</main>
+
+
+
+
+<%= render "shared/footer" %>

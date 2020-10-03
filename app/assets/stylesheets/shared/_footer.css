@@ -1,0 +1,15 @@
+footer {
+  padding: 20px 30px 30px 30px;
+  background-color:  #709365;
+}
+
+.iconcolor {
+  color: aliceblue;
+}
+
+.footer-title {
+  font-style: italic;
+  text-align: center;
+  font-size: 30px;
+  color: antiquewhite;
+}

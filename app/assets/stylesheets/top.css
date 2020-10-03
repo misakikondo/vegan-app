@@ -1,0 +1,36 @@
+main {
+  background-color: #709365;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.lists {
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Sansita Swashed', cursive;
+  color: white;
+  font-size: 40px;
+}
+
+.first-container {
+  text-align: center;
+}
+
+.second-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.whiteback {
+  width: 700px;
+  height: 99%;
+  background-color:  #D2B48C;
+  text-align: center;
+}
+
