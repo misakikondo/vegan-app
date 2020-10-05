@@ -22,12 +22,12 @@
 | -------------------- | --------- | ------------------------------- |
 | recipes_name         | string    | null: false                     |
 | explains             | text      | null: false                     |
-| levels               | references| null: false, foreign_key:true   | 
-| times                | references| null: false, foreign_key: true  |
+| level_id             | integer   | null: false                     | 
+| cookingtime_id       | integer   | null: false                     |
 
 ## Association
-- has_one :level
-- has_one :time
+- belongs_to :levels
+- belongs_to :cookingtimes
 - belongs_to :user
 - has_many :comments
 
@@ -36,21 +36,21 @@
 
 | Column               | Type      | Options                         |
 | -------------------- | --------- | ------------------------------- |
-| levels_name          | string    | null: false                     |
+| name                 | string    | null: false                     |
 
 ## Association
-- belongs_to :recipe
+- has_many :recipes
 
 
 
-## times テーブル
+## cookingtimes テーブル
 
 | Column               | Type      | Options                         |
 | -------------------- | --------- | ------------------------------- |
-| times_name           | string    | null: false                     |
+| name                 | string    | null: false                     |
 
 ## Association
-- belongs_to :recipe
+- has_many :recipes
 
 
 

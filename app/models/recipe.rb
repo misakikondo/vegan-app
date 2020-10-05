@@ -1,7 +1,12 @@
 class Recipe < ApplicationRecord
-  has_one :level
-  has_one :time
+  belongs_to :levels
+  belongs_to :cookingtimes
   belongs_to :user
-  has_many :comments
+  has_many   :comments
 
+  with_options presence: true do
+    validates :level_id,  numericality: { other_than: 1, message: 'Select' }
+    validates :cookingtime_id,  numericality: { other_than: 1, message: 'Select' }
+
+  end
 end
