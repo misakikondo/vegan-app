@@ -2,6 +2,32 @@
   background-color: #FFFAF0;
 }
 
+.recipes-container{
+  display: flex;
+}
+
+.index-recipe-image {
+  position: relative;
+}
+
+.recipe-img {
+  width: 33vh;
+  height: 40vh;
+}
+
+.index-recipe-name {
+  text-decoration: none;
+  font-family: 'Abril Fatface', cursive;
+}
+
+li {
+  list-style: none;
+}
+
+.list {
+  padding: 20px;
+}
+
 .title {
   font-family: 'Abril Fatface', cursive;
   text-align: center;
@@ -29,4 +55,14 @@
   bottom: 10px; 
   right: 10px;
   padding: 6px 40px;
+  font-family: 'Kosugi', sans-serif;
+  text-decoration: none;
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+}
+
+h4{
+  color: #DB5C35;
+  font-family: 'Abril Fatface', cursive;
 }

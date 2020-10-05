@@ -15,22 +15,31 @@
 </div>
 
 <div class= 'index-main'>
-  <%# <% @recipes.each do |recipe| %>
-      <%# <li class='list'>
-        <%= link_to "#"() do %> 
-        <%# <div class='recipe-image'>
-          <%= image_tag item.image, class: "item-img" %>
-        <%# </div> %>
-        <%# <div class='item-info'> %>
-          <%# <h3 class='hoge'> %>
-            <%# <%= item.items_name %> 
-          <%# </h3>
-        </div> %>
+
+<div class="recipes-container">
+  <% @recipes.each do |recipe| %>
+    <li class='list'>
+      <%= link_to "#" do %> 
+        <div class='index-recipe-image'>
+          <%= image_tag recipe.image, class: "recipe-img" %>
+        </div>
+        <div class='index-recipe-info'>
+          <h3 class='index-recipes-name'>
+            <%= recipe.recipes_name %> 
+          </h3>
+        </div>
+      <%end%>
+    </li>
+  <%end%> 
+</div> 
+
+
 </div>
 
 <div class= 'index-footer'>
   <div class='btn'>
-  <%= link_to '投稿する', new_recipe_path, class: "btn-text" %>
+  <%= link_to image_tag('writing.png' , size: '300x200' ,class: "btn-text"), new_recipe_path %>
+  <span class='btn-text'><h4>Share</h4></span>
   </div>
 </div>
 
