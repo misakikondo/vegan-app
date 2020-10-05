@@ -1,0 +1,28 @@
+.recipe-index{
+  background-color: #FFFAF0;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  color:  #709365;
+  padding: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: 'Kosugi', sans-serif;
+  color: #878986;
+  padding-bottom: 20px;
+}
+
+.btn-text{
+  position: fixed;
+  bottom: 10px; 
+  right: 10px;
+  padding: 6px 40px;
+}
