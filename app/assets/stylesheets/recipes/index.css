@@ -1,7 +1,5 @@
 .recipe-index{
   background-color: #FFFAF0;
-  width: 100%;
-  height: 100%;
 }
 
 .title {
@@ -18,6 +16,12 @@
   font-family: 'Kosugi', sans-serif;
   color: #878986;
   padding-bottom: 20px;
+}
+
+.textarea {
+  resize: none;
+  width:300px;
+  height:200px;
 }
 
 .btn-text{

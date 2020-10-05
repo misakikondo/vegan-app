@@ -8,9 +8,16 @@ class RecipesController < ApplicationController
   end
 
   def new
+    @recipe = Recipe.new
   end
 
   def create
+    @recipe = Recipe.new(recipe_params)
+    if @recipe.save
+      redirect_to recipes_path
+    else
+      render :new
+    end
   end
 
   # def search
@@ -21,6 +28,13 @@ class RecipesController < ApplicationController
 
 
   private
+
+  def recipe_params
+      params.require(:recipe).permit(
+        :recipes_name, :explains,
+        :level_id, :cookingtime_id
+      ).merge(user_id: current_user.id)
+  end
 
   # def search_recipe
   #   @p = Recipe.ransack(params[:q])  # 検索オブジェクトを生成

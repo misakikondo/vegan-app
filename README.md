@@ -24,10 +24,11 @@
 | explains             | text      | null: false                     |
 | level_id             | integer   | null: false                     | 
 | cookingtime_id       | integer   | null: false                     |
+| user_id              | integer   | null: false                     |
 
 ## Association
-- belongs_to :levels
-- belongs_to :cookingtimes
+- belongs_to :level
+- belongs_to :cookingtime
 - belongs_to :user
 - has_many :comments
 
