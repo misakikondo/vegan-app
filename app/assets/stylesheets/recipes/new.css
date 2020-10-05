@@ -2,7 +2,16 @@
   background-color: #FFFAF0;
 }
 
-.new-recipes {
+.recipe-image {
+  text-align: center;
+  padding: 20px;
+}
+
+.click-upload {
+  padding-left: 50px;
+}
+
+.recipe-name {
   text-align: center;
   padding: 20px;
 }

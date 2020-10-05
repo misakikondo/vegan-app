@@ -16,6 +16,13 @@
 
   <div class="new-recipes">
 
+    <div class="recipe-image">
+      <h2>Recipe Picture</h2>
+      <div class="click-upload">
+        <%= f.file_field :image, id:"recipe-image"%>
+      </div>
+    </div>
+
     <div class="recipe-name">
       <h2>Recipe Name</h2>
       <%= f.text_area :recipes_name, class:"recipes-text", id:"recipe-name", placeholder:"レシピ名（必須 40文字まで)", maxlength:"40" %>
@@ -23,7 +30,7 @@
 
     <div class="recipe-explain">
       <h2>How To Cook</h2>
-      <%= f.text_area :explains, class:"recipe-explain-text", id:"item-info", placeholder:"レシピの材料・作り方を記述してください（必須 1000文字まで)" ,rows:"7" ,maxlength:"1000" %>
+      <%= f.text_area :explains, class:"recipe-explain-text", id:"recipe-info", placeholder:"レシピの材料・作り方を記述してください（必須 1000文字まで)" ,rows:"7" ,maxlength:"1000" %>
     </div>
 
   </div>

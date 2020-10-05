@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
 
 
   def index
-    @recipes = Recipe.all()
+    @recipes = Recipe.all().order("created_at DESC")
   end
 
   def new
@@ -31,7 +31,7 @@ class RecipesController < ApplicationController
 
   def recipe_params
       params.require(:recipe).permit(
-        :recipes_name, :explains,
+        :image, :recipes_name, :explains,
         :level_id, :cookingtime_id
       ).merge(user_id: current_user.id)
   end
