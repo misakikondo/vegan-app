@@ -1,7 +1,32 @@
 .recipe-index{
   background-color: #FFFAF0;
-  width: 100%;
-  height: 100%;
+}
+
+.recipes-container{
+  display: flex;
+}
+
+.index-recipe-image {
+  position: relative;
+}
+
+.recipe-img {
+  width: 33vh;
+  height: 40vh;
+}
+
+.index-recipe-name {
+  text-decoration: none;
+  font-family: 'Abril Fatface', cursive;
+}
+
+li {
+  list-style: none;
+}
+
+.list {
+  width: 37vh;
+  padding: 1vw;
 }
 
 .title {
@@ -20,9 +45,25 @@
   padding-bottom: 20px;
 }
 
+.textarea {
+  resize: none;
+  width:300px;
+  height:200px;
+}
+
 .btn-text{
   position: fixed;
   bottom: 10px; 
   right: 10px;
   padding: 6px 40px;
+  font-family: 'Kosugi', sans-serif;
+  text-decoration: none;
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+}
+
+h4{
+  color: #DB5C35;
+  font-family: 'Abril Fatface', cursive;
 }
