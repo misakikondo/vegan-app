@@ -55,10 +55,12 @@ li {
   position: fixed;
   bottom: 10px; 
   right: 10px;
-  padding: 6px 40px;
+  width: 25vh;
+  padding: 1vw;
+  /* padding: 6px 40px; */
   font-family: 'Kosugi', sans-serif;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   color: black;
 }
