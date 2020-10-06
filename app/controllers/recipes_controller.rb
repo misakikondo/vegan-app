@@ -20,6 +20,10 @@ class RecipesController < ApplicationController
     end
   end
 
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
+
   # def search
     # @results = @p.result.includes(:level)
     # @results = @p.result.includes(:cookingtime)
