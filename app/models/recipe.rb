@@ -5,11 +5,9 @@ class Recipe < ApplicationRecord
   has_many   :comments
   has_one_attached :image
 
-  with_options presence: true do
-    validates :level_id
-    validates :cookingtime_id
-    validates :recipes_name, length: { maximum: 40 }
-    validates :explains, length: { maximum: 1000 }
-    validates :image
-  end
+  validates :image, presence: true
+  validates :explains,presence:true,length: { maximum: 1000 }
+  validates :recipes_name, presence:true,length: { maximum: 40 }
+  validates :level_id, presence:true
+  validates :cookingtime_id,presence:true
 end
