@@ -41,7 +41,7 @@
 <% if current_user == @recipe.user %>
     <%= link_to '編集する', edit_recipe_path , method: :get, class: "recipe-edit-btn" %>
     <p class='or-text'>or</p>
-    <%= link_to '削除する',  "#", method: :delete, class:'recipe-destroy' %>
+    <%= link_to '削除する', recipe_path , method: :delete, class:'recipe-destroy' %>
 <% end %>
 
 <div class= btn-show>

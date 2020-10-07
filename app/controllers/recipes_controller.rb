@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!,  only: :new
-  before_action :find_recipe, only: [:show, :edit, :update]
+  before_action :find_recipe, only: [:show, :edit, :update, :destroy]
   # before_action :search_recipe, only: [:index, :search]
 
   def index
@@ -34,13 +34,13 @@ class RecipesController < ApplicationController
     end
   end
 
-  # def destroy
-  #   if @recipe.destroy
-  #     redirect_to recipes_path
-  #   else
-  #     render :show
-  #   end
-  # end
+  def destroy
+    if @recipe.destroy
+      redirect_to recipes_path
+    else
+      render :show
+    end
+  end
 
   # def search
   # @results = @p.result.includes(:level)
