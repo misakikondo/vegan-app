@@ -61,7 +61,7 @@
 | ----------------- | --------- | ------------------------------- |
 | recipe            | references| null: false, foreign_key: true  |
 | user              | references| null: false, foreign_key: true  |
-| test              | text      | null:false                      |
+| contents          | text      | null:false                      |
 
 ## Association
  - belongs_to :recipe

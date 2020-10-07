@@ -31,8 +31,8 @@
 }
 
 .recipe-show-explain {
-  width: 80%;
-  height: 50%;
+  width: 80vh;
+  height: 50vh;
 }
 
 .recipe-edit-btn {
@@ -61,4 +61,38 @@
 .recipe-back-btn{
   text-decoration: none;
   color: #709365;
+}
+
+h5 {
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+  color:  #709365;
+}
+
+.comment-title {
+  font-size: 30px;
+  font-weight: 900;
+  padding: 2vh;
+}
+
+.comment-container {
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.comment-text {
+  resize: none;
+  width:30vw;
+  height:20vh;
+}
+
+.comments {
+  background-color: antiquewhite;
+  text-align: center;
+  padding: 2vh;
+}
+
+.comment-box {
+  height: 300px;
+  overflow-y: scroll;
 }

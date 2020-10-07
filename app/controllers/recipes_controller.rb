@@ -42,6 +42,12 @@ class RecipesController < ApplicationController
     end
   end
 
+  def show
+    @comment = Comment.new
+    @comments = @recipe.comments.includes(:user)
+  end
+
+
   # def search
   # @results = @p.result.includes(:level)
   # @results = @p.result.includes(:cookingtime)
