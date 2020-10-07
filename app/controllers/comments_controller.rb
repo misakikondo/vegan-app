@@ -5,8 +5,6 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     if @comment.save
       redirect_to recipe_path(@comment.recipe.id)
-    else
-      render template: "recipes/show"
     end
   end
 
