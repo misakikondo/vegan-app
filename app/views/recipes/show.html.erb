@@ -1,0 +1,57 @@
+<%= render "shared/second-header"%> 
+
+<div class= "recipe-show">
+
+<div class="show-main">
+<div class= "main-left">
+  
+  <div class= recipe-show-img>
+    <%= image_tag @recipe.image, class: 'recipe_img' %>
+  </div>
+
+</div>
+
+<div class= "main-right">
+
+  <div class= "recipe-show-name">
+    <%= @recipe.recipes_name %>
+  </div>
+
+  <div class= "recipe-show-nickname">
+    <h1><%= @recipe.user.nickname %>さんのレシピです</h1>
+  </div>
+
+
+  <div class= "recipe-show-explain">
+    <%= @recipe.explains %>
+  </div>
+
+
+  <div class= "recipe-show-level">
+    <h1>Level: <%= @recipe.level.name %></h1>
+  </div>
+
+  <div class= "recipe-show-cookingtime">
+    <h1>Time: <%= @recipe.cookingtime.name %></h1>
+  </div>
+
+
+<div class= "show-recipe-edit-delete">
+
+<% if current_user == @recipe.user %>
+    <%= link_to '編集する', "#", method: :get, class: "recipe-edit-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除する',   "#", method: :delete, class:'recipe-destroy' %>
+<% end %>
+
+<div class= btn-show>
+<%= link_to 'Back', recipes_path, class: "recipe-back-btn" %>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<%= render "shared/second-footer"%> 
