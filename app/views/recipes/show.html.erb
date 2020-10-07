@@ -2,56 +2,90 @@
 
 <div class= "recipe-show">
 
-<div class="show-main">
-<div class= "main-left">
+  <div class="show-main">
+    <div class= "main-left">
   
-  <div class= recipe-show-img>
-    <%= image_tag @recipe.image, class: 'recipe_img' %>
+      <div class= recipe-show-img>
+        <%= image_tag @recipe.image, class: 'recipe_img' %>
+      </div>
+
+    </div>
+
+  <div class= "main-right">
+
+    <div class= "recipe-show-name">
+      <%= @recipe.recipes_name %>
+    </div>
+
+    <div class= "recipe-show-nickname">
+      <h1><%= @recipe.user.nickname %>さんのレシピです</h1>
+    </div>
+
+
+    <div class= "recipe-show-explain">
+      <%= @recipe.explains %>
+    </div>
+
+
+    <div class= "recipe-show-level">
+      <h1>Level: <%= @recipe.level.name %></h1>
+    </div>
+
+    <div class= "recipe-show-cookingtime">
+      <h1>Time: <%= @recipe.cookingtime.name %></h1>
+    </div>
+
+
+  <div class= "show-recipe-edit-delete">
+
+    <% if current_user == @recipe.user %>
+      <%= link_to '編集する', edit_recipe_path(@recipe.id) , method: :get, class: "recipe-edit-btn" %>
+      <p class='or-text'>or</p>
+      <%= link_to '削除する', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' %>
+    <% end %>
+
+    <div class= btn-show>
+      <%= link_to 'Back', recipes_path, class: "recipe-back-btn" %>
+    </div>
+
   </div>
+    
+</div>
 
 </div>
 
-<div class= "main-right">
-
-  <div class= "recipe-show-name">
-    <%= @recipe.recipes_name %>
+<div class= "comment-container">
+  <div class="comment-title">
+    <h5>Comment</h5>
   </div>
-
-  <div class= "recipe-show-nickname">
-    <h1><%= @recipe.user.nickname %>さんのレシピです</h1>
+  <div class="comment-box">
+    <% if current_user %>
+      <%= form_with model: [@recipe,@comment],url: recipe_comments_path(@recipe.id), method: :post, local: true do |f| %>
+      <%= f.text_area :contents, class:"comment-text",placeholder: "コメントを記入してください" %>
+    <div class="comment-warn">
+        <h2>相手のことを考え丁寧なコメントを心がけましょう。</h2>
+        <h2>不快な言葉遣いなどは利用制限や退会処分となることがあります。</h2>
+    </div>
+      <button type="submit" class="comment-btn">
+      <% f.submit "submit", class: "comment-btn"%>
+        <h6>コメントする</h6>
+      </button>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
   </div>
-
-
-  <div class= "recipe-show-explain">
-    <%= @recipe.explains %>
-  </div>
-
-
-  <div class= "recipe-show-level">
-    <h1>Level: <%= @recipe.level.name %></h1>
-  </div>
-
-  <div class= "recipe-show-cookingtime">
-    <h1>Time: <%= @recipe.cookingtime.name %></h1>
-  </div>
-
-
-<div class= "show-recipe-edit-delete">
-
-<% if current_user == @recipe.user %>
-    <%= link_to '編集する', edit_recipe_path , method: :get, class: "recipe-edit-btn" %>
-    <p class='or-text'>or</p>
-    <%= link_to '削除する', recipe_path , method: :delete, class:'recipe-destroy' %>
-<% end %>
-
-<div class= btn-show>
-<%= link_to 'Back', recipes_path, class: "recipe-back-btn" %>
 </div>
 
+<div class="comments">
+  <h2>＜コメント一覧＞</h2>
+    <% if @comments %>
+      <% @comments.each do |comment| %>
+        <p>
+        <strong><%= link_to comment.user.nickname, "hoge" %>：</strong>
+      <%= comment.contents %>
+        </p>
+      <% end %>
+    <% end %>
 </div>
-
-</div>
-
-</div>
-
 <%= render "shared/second-footer"%> 

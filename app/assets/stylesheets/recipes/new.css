@@ -13,16 +13,16 @@
 
 .recipe-name {
   text-align: center;
-  padding: 20px;
+  padding: 2vh;
 }
 
 .recipe-explain {
   text-align: center;
-  padding: 20px;
+  padding: 2vh;
 }
 
 .selections {
-  padding: 20px;
+  padding: 2vh;
   display: flex;
   justify-content: center;
 }
@@ -52,14 +52,14 @@
 
 .recipes-text {
   resize: none;
-  width: 300px;
-  height: 30px;
+  width: 30vw;
+  height: 3vh;
 }
 
 .recipe-explain-text {
   resize: none;
-  width:800px;
-  height:400px;
+  width:80vw;
+  height:40vh;
 }
 
 h2 {
