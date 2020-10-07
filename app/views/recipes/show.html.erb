@@ -1,4 +1,5 @@
 <%= render "shared/second-header"%> 
+<%= render 'shared/error_messages', model: @comment %>
 
 <div class= "recipe-show">
 
@@ -55,13 +56,14 @@
 </div>
 
 <div class= "comment-container">
+
   <div class="comment-title">
     <h5>Comment</h5>
   </div>
   <div class="comment-box">
     <% if current_user %>
       <%= form_with model: [@recipe,@comment],url: recipe_comments_path(@recipe.id), method: :post, local: true do |f| %>
-      <%= f.text_area :contents, class:"comment-text",placeholder: "コメントを記入してください" %>
+      <%= f.text_area :contents, class:"comment-text",placeholder: "コメントを記入してください(100文字まで）" %>
     <div class="comment-warn">
         <h2>相手のことを考え丁寧なコメントを心がけましょう。</h2>
         <h2>不快な言葉遣いなどは利用制限や退会処分となることがあります。</h2>
@@ -79,13 +81,17 @@
 
 <div class="comments">
   <h2>＜コメント一覧＞</h2>
+
+  <div class="comment-box">
     <% if @comments %>
       <% @comments.each do |comment| %>
         <p>
-        <strong><%= link_to comment.user.nickname, "hoge" %>：</strong>
-      <%= comment.contents %>
+        <strong><%= comment.user.nickname %>：</strong>
+        <%= comment.contents %>
         </p>
       <% end %>
     <% end %>
+  </div>
 </div>
+
 <%= render "shared/second-footer"%> 
