@@ -1,0 +1,63 @@
+<%= render "shared/second-header"%> 
+<div class='recipe-post'>
+
+<div class= 'post-header'>
+
+  <div class= 'title'>
+    <h1>Let's Share Your Vegan Recipes!</h1>
+  </div>
+  <div class= 'subtitle'>
+    <p>訂正箇所を入力してから、[内容を変更する]を押してください。</p>
+  </div>
+
+  <%= form_with model: @recipe, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+
+
+  <div class="new-recipes">
+
+    <div class="recipe-image">
+      <h2>Recipe Picture</h2>
+      <div class="click-upload">
+        <%= f.file_field :image, id:"recipe-image"%>
+      </div>
+    </div>
+
+    <div class="recipe-name">
+      <h2>Recipe Name</h2>
+      <%= f.text_area :recipes_name, class:"recipes-text", id:"recipe-name", placeholder:"レシピ名（必須 40文字まで)", maxlength:"40" %>
+    </div>
+
+    <div class="recipe-explain">
+      <h2>How To Cook</h2>
+      <%= f.text_area :explains, class:"recipe-explain-text", id:"recipe-info", placeholder:"レシピの材料・作り方を記述してください（必須 1000文字まで)" ,rows:"7" ,maxlength:"1000" %>
+    </div>
+
+  </div>
+
+  <div class="selections">
+    <div class= "levels">
+      <h3>難易度</h3>
+      <%= f.collection_select(:level_id, Level.all, :id, :name, {prompt: "選択してください"}, {class:"select-box", id:"recipe-level"}) %>
+    </div>
+
+    <div class= "cookingtimes">
+      <h3>調理時間</h3>
+      <%= f.collection_select(:cookingtime_id, Cookingtime.all, :id, :name, {prompt: "選択してください"}, {class:"select-box", id:"reccipe-cookingtime"}) %>
+    </div>
+  </div>
+
+
+  <div class="recipe-post-button">
+    <div class="posting-btn">
+      <%= f.submit "内容を変更する" ,class: "new-btn-text" %>
+    </div>
+
+  </div>
+
+</div>
+
+  <% end %>
+
+
+<%= render "shared/second-footer"%> 
