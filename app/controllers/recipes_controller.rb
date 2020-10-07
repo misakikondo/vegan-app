@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!,  only: :new
-  before_action :find_recipe, only: [:show,:edit,:update]
+  before_action :find_recipe, only: [:show, :edit, :update]
   # before_action :search_recipe, only: [:index, :search]
 
   def index
@@ -19,13 +19,10 @@ class RecipesController < ApplicationController
       render :new
     end
   end
-
-  def show
-  end
-
+  
   def edit
     if @recipe.user != current_user
-      render :show
+      render :show 
     end
   end
 
