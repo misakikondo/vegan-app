@@ -1,0 +1,63 @@
+
+.recipe-show {
+  background-color: antiquewhite;
+  height: 100vh;
+}
+
+.show-main {
+  display: flex;
+  height: 100vh;
+}
+
+.main-left {
+  width: 50vw;
+}
+
+.recipe_img {
+  width: 50vh;
+  padding: 1vw;
+}
+
+.main-right {
+  width: 30vw;
+  flex-direction: column;
+  text-align: left;
+}
+
+.recipe-show-name {
+  font-size: 70px;
+  font-family: 'Kosugi', sans-serif;
+}
+
+.recipe-show-explain {
+  width: 80%;
+  height: 50%;
+}
+
+.recipe-edit-btn {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: 'Kosugi', sans-serif;
+}
+
+.recipe-destroy {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: 'Kosugi', sans-serif;
+}
+
+.show-recipe-edit-delete {
+  padding-top: 20px;
+}
+
+.btn-show {
+  padding-top: 20px;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.recipe-back-btn{
+  text-decoration: none;
+  color: #709365;
+}
