@@ -1,5 +1,9 @@
 FactoryBot.define do
   factory :comment do
+    contents            { "美味しそうですね" }
     
-  end
-end
+    association :user
+    association :recipe
+    
+      end
+    end
