@@ -25,8 +25,9 @@
 }
 
 .recipe-show-name {
-  font-size: 70px;
+  font-size: 30px;
   font-family: 'Kosugi', sans-serif;
+  padding-top: 2vh;
 }
 
 .recipe-show-explain {
