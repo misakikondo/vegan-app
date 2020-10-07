@@ -5,6 +5,9 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     if @comment.save
       redirect_to recipe_path(@comment.recipe.id)
+    else
+      @comments = @recipe.comments.includes(:user)
+       render 'recipes/show'
     end
   end
 
