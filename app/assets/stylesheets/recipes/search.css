@@ -1,0 +1,12 @@
+.saerch-main {
+  background-color:antiquewhite;
+  height: 100%;
+}
+
+.btn-search {
+  text-decoration: none;
+  text-align: center;
+  font-size: 50px;
+  color: #709365;
+  font-family: 'Abril Fatface', cursive;
+}
