@@ -1,0 +1,32 @@
+<%= render "shared/second-header"%> 
+
+<div class= 'saerch-main'>
+
+  <div class="recipes-container">
+    <% if @results.length !=0 %>
+    <% @results.each do |result| %>
+    <li class='list'>
+      <%= link_to recipe_path(result.id) do %> 
+      <div class='index-recipe-image'>
+        <%= image_tag result.image, class: "recipe-img" %>
+      </div>
+      <div class='index-recipe-info'>
+        <h3 class='index-recipes-name'>
+        <%= result.recipes_name %> 
+        </h3>
+      </div>
+      <%end%>
+    </li>
+    <%end%> 
+  <% else %>
+  <h2>該当するレシピはありません</h2>
+  <% end %>
+  </div> 
+
+  <div class= btn-search>
+      <%= link_to 'Back', recipes_path, class: "recipe-back-btn" %>
+  </div>
+
+</div>
+
+<%= render "shared/second-footer"%> 

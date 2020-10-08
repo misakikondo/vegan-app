@@ -1,10 +1,12 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!,  only: :new
   before_action :find_recipe, only: [:show, :edit, :update, :destroy]
-  # before_action :search_recipe, only: [:index, :search]
+  before_action :search_recipe, only: [:index, :search]
 
   def index
     @recipes = Recipe.all.order('created_at DESC')
+    set_level_column
+    set_cookingtime_column
   end
 
   def new
@@ -48,11 +50,10 @@ class RecipesController < ApplicationController
   end
 
 
-  # def search
-  # @results = @p.result.includes(:level)
-  # @results = @p.result.includes(:cookingtime)
-  # end
-  # 検索画面実装時に編集
+  def search
+    @results = @r.result.includes(:level)
+    @results = @r.result.includes(:cookingtime)
+  end
 
   private
 
@@ -67,8 +68,16 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
-  # def search_recipe
-  #   @p = Recipe.ransack(params[:q])  # 検索オブジェクトを生成
-  # end
-  # 検索画面実装時に編集
+  def search_recipe
+    @r = Recipe.ransack(params[:q])  # 検索オブジェクトを生成
+  end
+
+  def set_level_column
+    @level_name = Level.select("name").distinct
+  end
+
+  def set_cookingtime_column
+    @cookingtime_name = Cookingtime.select("name").distinct
+  end
+
 end

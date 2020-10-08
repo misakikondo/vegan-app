@@ -9,10 +9,27 @@
     <h2>ビーガンレシピを作ってみよう！レシピをシェアしよう！</h2>
     <p>レベルと調理時間の検索ができます</p>
   </div>
-  <div class= 'sarch-box'>
-    <%# レベルと調理時間を入れて複雑な検索できるよう実装 %>
-  </div>
 </div>
+
+
+    <%= search_form_for @r, url: recipes_search_path do |f| %>
+  <div class= 'search-box'>
+    <div class="search-level">
+      <%= f.label :level_name_eq, 'レベル：' %>
+      <%= f.collection_select :level_name_eq, @level_name, :name, :name, include_blank: '指定なし' %>
+    </div>
+
+    <div class="search-cookintime">
+      <%= f.label :cookingtime_name_eq, '調理時間：' %>
+      <%= f.collection_select :cookingtime_name_eq, @cookingtime_name, :name, :name, include_blank: '指定なし' %>
+    </div>
+
+    <div class= "search-btn">
+      <%= f.submit '検索' %>
+    </div>
+  </div> 
+      <% end %>
+
 
 <div class= 'index-main'>
 

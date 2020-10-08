@@ -1,5 +1,28 @@
 .recipe-index{
-  background-color: #FFFAF0;
+  background-color: antiquewhite;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  padding: 2vh;
+}
+
+.search-level {
+  padding-right: 2vh;
+}
+
+.search-cookingtime {
+  padding-right: 2vh;
+}
+
+.search-btn {
+  padding-left: 2vh;
+}
+
+
+.index-main {
+  background-color: antiquewhite;
 }
 
 .recipes-container{
