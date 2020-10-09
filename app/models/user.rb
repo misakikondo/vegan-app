@@ -20,4 +20,8 @@ class User < ApplicationRecord
   validates :nickname, presence: true
 
   validates :birth, presence: true
+
+  def already_liked?(recipe)
+    self.likes.exists?(recipe_id: recipe.id)
+  end
 end

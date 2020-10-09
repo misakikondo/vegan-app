@@ -1,9 +1,47 @@
-<%= @user.nickname%>
+<%= render "shared/second-header"%> 
 
-  <h1>投稿したレシピ</h1>
-  <% @user.recipes.each do |recipe| %>
-    <%= recipe.recipes_name %>
-    <%= image_tag recipe.image%>
-  <%end%>
+<h2><%= @user.nickname%>さんのマイページ</h2>
 
-<h1>いいねを押したレシピ</h1>
+  <div class= "mypage">
+
+    <h1>投稿したレシピ</h1>
+    <div class="recipes-container">
+    <% @user.recipes.each do |recipe| %>
+      <li class='list'>
+      <%= link_to recipe_path(recipe.id) do %> 
+        <div class='index-recipe-image'>
+          <%= image_tag recipe.image, class: "recipe-img" %>
+        </div>
+        <div class='index-recipe-info'>
+          <h3 class='index-recipes-name'>
+            <%= recipe.recipes_name %>
+          </h3>
+        </div>
+      <%end%>
+      <%= recipe.likes.count %>
+      </li>
+    <%end%> 
+    </div> 
+
+  <h1>いいねを押したレシピ</h1>
+    <div class="recipes-container">
+    <% @user.liked_recipes.each do |recipe| %>
+      <li class='list'>
+      <%= link_to recipe_path(recipe.id) do %> 
+        <div class='index-recipe-image'>
+          <%= image_tag recipe.image, class: "recipe-img" %>
+        </div>
+        <div class='index-recipe-info'>
+          <h3 class='index-recipes-name'>
+            <%= recipe.recipes_name %>
+          </h3>
+        </div>
+      <%end%>
+      <%= recipe.likes.count %>
+      </li>
+    <%end%> 
+    </div> 
+
+ </div>
+
+ <%= render "shared/second-footer"%> 

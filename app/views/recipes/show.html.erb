@@ -55,11 +55,31 @@
 
 </div>
 
+<div class= "like-container">
+
+  <h3>いいね件数: <%= @recipe.likes.count %></h3>
+  
+  <% if current_user.already_liked?(@recipe) %>
+    <%= button_to 'いいねを取り消す', recipe_like_path(@recipe), method: :delete %>
+  <% else %>
+    <%= button_to 'いいね', recipe_likes_path(@recipe) %>
+  <% end %>
+
+
+  <h2>いいねしたユーザー</h2>
+  <% @recipe.liked_users.each do |user|%>
+    <li><%= user.nickname %></li>
+  <% end %>
+
+</div>
+
+
+<div class="comment-title">
+    <h5>Comment</h5>
+</div>
+
 <div class= "comment-container">
 
-  <div class="comment-title">
-    <h5>Comment</h5>
-  </div>
   <div class="comment-box">
     <% if current_user %>
       <%= form_with model: [@recipe,@comment],url: recipe_comments_path(@recipe.id), method: :post, local: true do |f| %>
@@ -77,12 +97,10 @@
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
   </div>
-</div>
 
-<div class="comments">
+
+  <div class="comment-index">
   <h2>＜コメント一覧＞</h2>
-
-  <div class="comment-box">
     <% if @comments %>
       <% @comments.each do |comment| %>
         <p>
@@ -92,6 +110,7 @@
       <% end %>
     <% end %>
   </div>
+
 </div>
 
 <%= render "shared/second-footer"%> 
