@@ -1,0 +1,9 @@
+<%= @user.nickname%>
+
+  <h1>投稿したレシピ</h1>
+  <% @user.recipes.each do |recipe| %>
+    <%= recipe.recipes_name %>
+    <%= image_tag recipe.image%>
+  <%end%>
+
+<h1>いいねを押したレシピ</h1>
