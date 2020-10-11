@@ -14,6 +14,8 @@
 - has_many :donates
 - has_many :recipes
 - has_many :comments
+- has_many :likes
+- has_many :liked_recipes, through: :likes, source: :recipe
 
 
 ## recipes テーブル
@@ -31,13 +33,15 @@
 - belongs_to :cookingtime
 - belongs_to :user
 - has_many :comments
+- has_many :likes
+- has_many :liked_users, through: :likes, source: :user
 
 
 ## levels テーブル
 
-| Column               | Type      | Options                         |
-| -------------------- | --------- | ------------------------------- |
-| name                 | string    | null: false                     |
+| Column  | Type      | Options     |
+| --------| --------- | ----------- |
+| name    | string    | null: false |
 
 ## Association
 - has_many :recipes
@@ -46,12 +50,25 @@
 
 ## cookingtimes テーブル
 
-| Column               | Type      | Options                         |
-| -------------------- | --------- | ------------------------------- |
-| name                 | string    | null: false                     |
+| Column | Type      | Options       |
+| -------| -------- -| ------------- |
+| name   | string    | null: false   |
 
 ## Association
 - has_many :recipes
+
+
+
+## likes テーブル
+
+| Column | Type      | Options                       |
+| -------| -------- -| ------------------------------|
+| user   | references| null: false,foreign_key: true |
+| recipe | references| null: false,foreign_key: true |
+
+## Association
+- belongs_to :user
+- belongs_to :recipe
 
 
 

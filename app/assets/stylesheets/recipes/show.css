@@ -9,6 +9,11 @@
   height: 100vh;
 }
 
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .main-left {
   width: 50vw;
 }
@@ -19,7 +24,7 @@
 }
 
 .main-right {
-  width: 30vw;
+  /* width: 30vw; */
   flex-direction: column;
   text-align: left;
 }
@@ -50,6 +55,8 @@
 }
 
 .show-recipe-edit-delete {
+  display: flex;
+  justify-content: right;
   padding-top: 20px;
 }
 
@@ -63,19 +70,32 @@
   color: #709365;
 }
 
+.like-container {
+  padding-top: 2vh;
+}
+
 h5 {
   font-family: 'Abril Fatface', cursive;
   text-align: center;
   color:  #709365;
 }
+/* 
+.show-footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: antiquewhite;
+} */
 
 .comment-title {
   font-size: 30px;
   font-weight: 900;
   padding: 2vh;
+  background-color: antiquewhite;
 }
 
 .comment-container {
+  display: flex;
+  padding-left: 30vh;
   background-color: antiquewhite;
   text-align: center;
 }
@@ -93,6 +113,10 @@ h5 {
 }
 
 .comment-box {
-  height: 100px;
+  margin: 2vh;
+}
+
+.comment-index{
+  height: 10vh;
   overflow-y: scroll;
 }

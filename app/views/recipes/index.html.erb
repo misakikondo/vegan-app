@@ -42,10 +42,11 @@
         </div>
         <div class='index-recipe-info'>
           <h3 class='index-recipes-name'>
-            <%= recipe.recipes_name %> 
+            <%= recipe.recipes_name %>
           </h3>
         </div>
       <%end%>
+      <h2>LIKE: <%= recipe.likes.count %></h2>
     </li>
   <%end%> 
 </div> 

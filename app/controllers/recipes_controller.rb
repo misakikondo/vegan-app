@@ -21,11 +21,9 @@ class RecipesController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
-    if @recipe.user != current_user
-      render :show 
-    end
+    render :show if @recipe.user != current_user
   end
 
   def update
@@ -47,8 +45,8 @@ class RecipesController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @recipe.comments.includes(:user)
+    @like = Like.new
   end
-
 
   def search
     @results = @r.result.includes(:level)
@@ -73,11 +71,10 @@ class RecipesController < ApplicationController
   end
 
   def set_level_column
-    @level_name = Level.select("name").distinct
+    @level_name = Level.select('name').distinct
   end
 
   def set_cookingtime_column
-    @cookingtime_name = Cookingtime.select("name").distinct
+    @cookingtime_name = Cookingtime.select('name').distinct
   end
-
 end

@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :recipes
   has_many :donates
   has_many :comments
+  has_many   :likes, dependent: :destroy
+  has_many   :liked_recipes, through: :likes, source: :recipe
 
   validates :email, uniqueness: true,
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
@@ -17,4 +19,8 @@ class User < ApplicationRecord
   validates :nickname, presence: true
 
   validates :birth, presence: true
+
+  def already_liked?(recipe)
+    likes.exists?(recipe_id: recipe.id)
+  end
 end
