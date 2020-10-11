@@ -1,9 +1,7 @@
 <%= render "shared/second-header"%> 
 
-<h2><%= @user.nickname%>さんのマイページ</h2>
-
-  <div class= "mypage">
-
+<div class= "mypage">
+    <h2><%= @user.nickname%>さんのマイページ</h2>
     <h1>投稿したレシピ</h1>
     <div class="recipes-container">
     <% @user.recipes.each do |recipe| %>
@@ -18,7 +16,7 @@
           </h3>
         </div>
       <%end%>
-      <%= recipe.likes.count %>
+      <h2>LIKE: <%= recipe.likes.count %></h2>
       </li>
     <%end%> 
     </div> 
@@ -37,7 +35,7 @@
           </h3>
         </div>
       <%end%>
-      <%= recipe.likes.count %>
+      <h2>LIKE: <%= recipe.likes.count %></h2>
       </li>
     <%end%> 
     </div> 

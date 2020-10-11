@@ -24,7 +24,7 @@
 }
 
 .main-right {
-  width: 30vw;
+  /* width: 30vw; */
   flex-direction: column;
   text-align: left;
 }
