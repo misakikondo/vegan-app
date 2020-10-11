@@ -9,6 +9,11 @@
   height: 100vh;
 }
 
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .main-left {
   width: 50vw;
 }
@@ -50,6 +55,8 @@
 }
 
 .show-recipe-edit-delete {
+  display: flex;
+  justify-content: right;
   padding-top: 20px;
 }
 
@@ -61,6 +68,10 @@
 .recipe-back-btn{
   text-decoration: none;
   color: #709365;
+}
+
+.like-container {
+  padding-top: 2vh;
 }
 
 h5 {

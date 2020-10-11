@@ -14,8 +14,20 @@
 
   <div class= "main-right">
 
-    <div class= "recipe-show-name">
-      <%= @recipe.recipes_name %>
+    <div class= "main-title">
+      <div class= "recipe-show-name">
+        <%= @recipe.recipes_name %>
+      </div>
+
+      <div class= "show-recipe-edit-delete">
+        <%# <div class= "show-edit"> %>
+          <% if current_user == @recipe.user %>
+          <%= link_to '編集/', edit_recipe_path(@recipe.id) , method: :get, class: "recipe-edit-btn" %>
+          <%= link_to '削除', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' , data: { confirm: 'Are you sure?' }%>
+          <% end %>
+        <%# </div> %>
+      </div>
+
     </div>
 
     <div class= "recipe-show-nickname">
@@ -36,29 +48,18 @@
       <h1>Time: <%= @recipe.cookingtime.name %></h1>
     </div>
 
-
-  <div class= "show-recipe-edit-delete">
-
-    <% if current_user == @recipe.user %>
-      <%= link_to '編集する', edit_recipe_path(@recipe.id) , method: :get, class: "recipe-edit-btn" %>
-      <p class='or-text'>or</p>
-      <%= link_to '削除する', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' %>
-    <% end %>
+    <div class= "like-container">
+      <span id="recipe_<%= @recipe.id %>">
+        <%= render partial: 'recipe', locals: { recipe: @recipe } %>
+      </span>
+    </div>
 
     <div class= btn-show>
       <%= link_to 'Back', recipes_path, class: "recipe-back-btn" %>
     </div>
-
-  </div>
     
-</div>
+  </div>
 
-</div>
-
-<div class= "like-container">
-<span id="recipe_<%= @recipe.id %>">
-  <%= render partial: 'recipe', locals: { recipe: @recipe } %>
-</span>
 </div>
 
 
