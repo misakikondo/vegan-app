@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :recipes
   has_many :donates
   has_many :comments
-  has_many   :likes
+  has_many   :likes, dependent: :destroy
   has_many   :liked_recipes, through: :likes, source: :recipe
 
 
