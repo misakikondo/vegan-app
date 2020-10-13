@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_10_122030) do
+ActiveRecord::Schema.define(version: 2020_10_12_095613) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -49,6 +49,14 @@ ActiveRecord::Schema.define(version: 2020_10_10_122030) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "donates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "price", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_donates_on_user_id"
+  end
+
   create_table "levels", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -71,9 +79,8 @@ ActiveRecord::Schema.define(version: 2020_10_10_122030) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.bigint "cookingtime_id", null: false
-    t.bigint "level_id", null: false
+    t.integer "level_id"
     t.index ["cookingtime_id"], name: "index_recipes_on_cookingtime_id"
-    t.index ["level_id"], name: "index_recipes_on_level_id"
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
@@ -94,9 +101,9 @@ ActiveRecord::Schema.define(version: 2020_10_10_122030) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "recipes"
   add_foreign_key "comments", "users"
+  add_foreign_key "donates", "users"
   add_foreign_key "likes", "recipes"
   add_foreign_key "likes", "users"
   add_foreign_key "recipes", "cookingtimes"
-  add_foreign_key "recipes", "levels"
   add_foreign_key "recipes", "users"
 end

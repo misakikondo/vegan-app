@@ -86,36 +86,14 @@
 
 
 
-## orders テーブル
+## donates テーブル
 
 | Column            | Type      | Options                         |
 | ----------------- | --------- | ------------------------------- |
 | user              | references| null: false, foreign_key: true  |
 | price             | integer   | null: false                     |
-| gift_id           | integer   | null: false                     |
+
 
 ## Association
 
 - belongs_to :user
-- has_one :address
-- belongs_to_active_hash :gift
-
-
-## addresses テーブル
-
-| Column            | Type      | Options                         |
-| ----------------- | --------- | ------------------------------- |
-| zip_code          | string    | null: false                     |
-| prefecture        | integer   | null: false                     |
-| city              | string    | null: false                     |
-| block             | string    | null: false                     |
-| building_name     | string    |                                 |
-| phone             | string    | null: false                     |
-| order             | references| null: false, foreign_key: true  |
-
-## Association
-
-- belongs_to :donate
-- belongs_to_active_hash :prefecture
-
-
