@@ -1,0 +1,63 @@
+<%= render "shared/second-header"%> 
+ <%= render 'shared/error_messages', model: @donate %>
+
+<div class= "donation-container">
+  <div class="donation=logo">
+    <h1>Donation</h1>
+  </div>
+
+  <div class="donation-info">
+
+    <div class="donate">
+      <%= image_tag 'cow.jpeg', :size => '350x250'%>
+      <h1>¥1000の募金で</h1>
+    </div>
+
+    <div class="donate">
+      <%= image_tag 'chicken.jpeg', :size => '350x250'%>
+      <h1>¥2000</h1>
+    </div>
+
+    <div class="donate">
+      <%= image_tag 'pig.jpeg', :size => '350x250'%>
+      <h1>¥5000</h1>
+    </div> 
+
+  </div>
+
+<%= form_with  model: @donate, id: 'charge-form', class: 'card-form',local: true do |f| %>
+  
+  <div class='form-wrap'>
+    <%= f.label :price, "金額" %>
+    <%= f.text_field :price, class:"price", placeholder:"例)2000" %>
+  </div>
+  <div class='form-wrap'>
+    <%= f.label :number,  "カード番号" %>
+    <%= f.text_field :number, class:"number", placeholder:"カード番号(半角英数字)", maxlength:"16" %>
+  </div>
+  <div class='form-wrap'>
+    <%= f.label :cvc ,"ＣＶＣ" %>
+    <%= f.text_field :cvc, class:"cvc", placeholder:"カード背面4桁もしくは3桁の番号", maxlength:"4" %>
+  </div>
+  <div class='form-wrap'>
+    <p>有効期限</p>
+    <div class='input-expiration-date-wrap'>
+      <%= f.text_field :exp_month, class:"exp_month", placeholder:"例)3" %>
+      <p>月</p>
+      <%= f.text_field :exp_year, class:"exp_year", placeholder:"例)24" %>
+      <p>年</p>
+    </div>
+  </div>
+  <%= f.submit "購入" ,class:"button" %>
+<% end %>
+
+</div>
+
+
+
+
+
+
+
+
+<%= render "shared/second-footer"%> 

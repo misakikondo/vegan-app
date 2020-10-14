@@ -1,0 +1,10 @@
+.donation-container{
+  background-color:antiquewhite;
+  height: 100%;
+}
+
+.donation-info{
+  display: flex;
+  justify-content: space-around;
+  padding: 2vh;
+}
