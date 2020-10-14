@@ -19,29 +19,29 @@ RSpec.describe Donate, type: :model do
         end
       end
 
-        it 'Priceが空だと出品できないこと' do
-          @donate.price = nil
-          @donate.valid?
-          expect(@donate.errors.full_messages).to include("Price can't be blank", 'Price Half-width number')
-        end
-  
-        it 'Priceが500未満だと出品できないこと' do
-          @donate.price = 400
-          @donate.valid?
-          expect(@donate.errors.full_messages).to include('Price Out of setting range')
-        end
-  
-        it 'Priceが9999999超過だと出品できないこと' do
-          @donate.price = 10_000_000
-          @donate.valid?
-          expect(@donate.errors.full_messages).to include('Price Out of setting range')
-        end
-  
-        it 'Priceが半角数字でないと出品できないこと' do
-          @donate.price = '１０００'
-          @donate.valid?
-          expect(@donate.errors.full_messages).to include('Price Out of setting range')
-        end
+      it 'Priceが空だと出品できないこと' do
+        @donate.price = nil
+        @donate.valid?
+        expect(@donate.errors.full_messages).to include("Price can't be blank", 'Price Half-width number')
+      end
+
+      it 'Priceが500未満だと出品できないこと' do
+        @donate.price = 400
+        @donate.valid?
+        expect(@donate.errors.full_messages).to include('Price Out of setting range')
+      end
+
+      it 'Priceが9999999超過だと出品できないこと' do
+        @donate.price = 10_000_000
+        @donate.valid?
+        expect(@donate.errors.full_messages).to include('Price Out of setting range')
+      end
+
+      it 'Priceが半角数字でないと出品できないこと' do
+        @donate.price = '１０００'
+        @donate.valid?
+        expect(@donate.errors.full_messages).to include('Price Out of setting range')
       end
     end
+  end
 end
