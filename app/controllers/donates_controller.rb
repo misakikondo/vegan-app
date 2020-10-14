@@ -5,7 +5,6 @@ def index
 end
 
 def create
-  binding.pry
   @donate = Donate.new(donate_params)
   if @donate.valid?
     pay_donate
