@@ -1,0 +1,29 @@
+.donation-container{
+  background-color:antiquewhite;
+  height: 100%;
+}
+
+.donation-info{
+  display: flex;
+  justify-content: space-around;
+  padding: 2vh;
+  text-align: center;
+}
+
+.form-donate-wrap{
+  background-color:antiquewhite;
+  height: 100%;
+  text-align: center;
+  padding: 2vh;
+}
+
+
+.price,
+.number,
+.cvc,
+.exp_month,
+.exp_year{
+  background-color:antiquewhite;
+  height: 100%;
+  text-decoration: none;
+}
