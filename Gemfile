@@ -62,6 +62,7 @@ gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'ransack'
 gem 'payjp'
+gem 'rakuten_web_service'
 
 group :production do
   gem 'rails_12factor'
