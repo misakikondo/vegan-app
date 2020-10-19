@@ -1,0 +1,17 @@
+<% if @items.present? %>
+  <% @items.first(10).each do |item| %>
+  <div class= "item-container">
+    <div class= "item-image">
+      <img src="<%= item['smallImageUrls'][0] %>"></td>
+    </div>
+
+    <div class="item-name">
+      <a href="<%= item['itemUrl']%>" target="_blank"><%= item['itemName']%></a>
+    </div>
+
+    <div class="item-price">
+    <%= item['itemPrice'] %>円
+    </div>
+  </div>
+  <% end %>
+<% end %>
