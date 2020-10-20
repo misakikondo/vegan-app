@@ -1,6 +1,7 @@
 # Vegan Biginner  
 
-画像
+<img width="969" alt="toppage" src="https://user-images.githubusercontent.com/70508952/96553847-b733ac00-12f0-11eb-8b1f-6a494e71565b.png">
+<img width="987" alt="index" src="https://user-images.githubusercontent.com/70508952/96553883-c0247d80-12f0-11eb-99fb-53f69fe0a601.png">
 
 ## new Read/概要  
 This is a recipe sharing application for pepole who is looking for Vegan recipes.  
@@ -18,7 +19,7 @@ Recipe: 右下のShareボタンから投稿画面へ移動してください。
 Product:レシピを検索して必要な物がある時には、商品を検索して楽天の商品を購入できます。  
 Donation:金額とカード情報を正しく入力すると寄付をすることができます。  
   
-#### サイトURL 
+#### URL 
 https://veganapp-0718.herokuapp.com/  
   
 #### Basic認証  
@@ -52,14 +53,27 @@ cvc number: 123
 | 商品検索             | 公開外部API（rakutenAPI）を用いた実装方法を習得するため                            | ・検索ボックスに文字を入力すると、楽天の商品一覧（最初の10商品）が表示される                                                                                                                                                                 | ・キーワード検索ができるよう、検索フォームを設ける<br>・検索フォームが空欄では何も表示されない                             | 
 | マイページ           | ユーザーがいいねを押したレシピを管理できるようにするため                           | ・自分の投稿したレシピと、いいねを押したレシピが表示される<br>・レシピをクリックすると、レシピの詳細に遷移できる                                                                                                                             | ・レシピの管理をする                                                                                                       | 
 
+## 機能説明
+
+### レシピ検索機能
+![Videotogif](https://user-images.githubusercontent.com/70508952/96558974-683d4500-12f7-11eb-8365-32af6b97df02.gif)
+レシピの検索機能を用いて、自分のレベルに合ったレシピを検索できます。
+
+### いいね機能
+![like](https://user-images.githubusercontent.com/70508952/96559346-e13c9c80-12f7-11eb-878f-08aa01d604f4.gif)
+いいねボタンを押しマイページへ戻ると、いいねを押したレシピが保存されています。
+
+
+
+
 ## ER図
-<img src="images/veganapp.png" width="420px">  
+![veganapp](https://user-images.githubusercontent.com/70508952/96553447-20ff8600-12f0-11eb-9c32-d4d278eecee5.png)  
 
 ## インストール
 Rails 6.0.3.4  
   
-% git clone https://github.com/misakikondo/vegan-app.git
-% bundle install
-% rails db:create
-% rails db:migrate
-% rails s
+% git clone https://github.com/misakikondo/vegan-app.git  
+% bundle install  
+% rails db:create  
+% rails db:migrate  
+% rails s  
