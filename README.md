@@ -1,99 +1,65 @@
-# テーブル設計
+# Vegan Biginner  
 
-## users テーブル
+画像
 
-| Column            | Type   | Options     |
-| ----------------- | ------ | ----------- |
-| nickname          | string | null: false |
-| email             | string | null: false |
-| encrypted_password| string | null: false |
-| birth             | date   | null: false |
+## new Read/概要  
+This is a recipe sharing application for pepole who is looking for Vegan recipes.  
+ヴィーガンに興味のあるの方のための、ヴィーガンレシピサイトです。  
+レシピの投稿や、自分に合ったレシピを検索・閲覧・管理することができます。  
+レシピを見て、グッズが欲しくなった時には楽天APIの商品検索機能でそのまま購入することもできます。  
+ヴィーガンライフスタイルを支持できるドネーション機能も設けました。  
 
-## Association
+## Usage/利用方法
+（全てログイン後に行ってください）  
+Recipe: 右下のShareボタンから投稿画面へ移動してください。  
+正しい情報を全て入力した後に投稿ボタンを押すと、投稿が完了します。  
+ユーザーは検索機能を用いて投稿されたレシピにいいねを押す事ができ、レシピの管理がマイページから行えます。  
+マイページへはヘッダー左上のご自身のお名前から移動することができます。  
+Product:レシピを検索して必要な物がある時には、商品を検索して楽天の商品を購入できます。  
+Donation:金額とカード情報を正しく入力すると寄付をすることができます。  
+  
+#### サイトURL 
+https://veganapp-0718.herokuapp.com/  
+  
+#### Basic認証  
+ID: misaki  
+Password: 1111  
+  
+#### テスト用アカウント
+ID: hello.veganapp@gmail.com  
+Password: 19921992m  
 
-- has_many :donates
-- has_many :recipes
-- has_many :comments
-- has_many :likes
-- has_many :liked_recipes, through: :likes, source: :recipe
+#### ドネーションテスト用カード情報
+CardNumber: 4242424242424242  
+exp month: 3  
+exp year: 24  
+cvc number: 123  
+  
+## 目指した課題解決
+ヴィーガンに関心がある流行に敏感な主に20代から40代の女性の、  
+初めにどのようにしてヴィーガンのライフスタイルを自身の生活に取り入れて行けば良いかという疑問を解消するため。  
 
+## 洗い出した要件
 
-## recipes テーブル
+| 機能                 | 目的                                                                               | 詳細                                                                                                                                                                                                                                         | ストーリー（ユースケース）                                                                                                 | 
+| -------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | 
+| ログイン             | ユーザーの管理をすることで、マイページやお気に入り等の機能を増やすことができるため | ・新規登録・ログイン画面で入力フォームに全て入力したらログインできる<br>・ログアウトボタンを押すとログアウトされる                                                                                                                           | ・重複したメールアドレスは登録できない<br>                                                                                 | 
+| レシピ投稿・編集     | CRUDの実装方法を確認するため                                                       | ・レシピ投稿画面で入力し、投稿が成功するとレシピ一覧画面に遷移する<br>・レシピ投稿一覧には投稿されたレシピが表示され、クリックするとレシピ詳細画面に遷移する<br>・投稿者は詳細を編集・削除することができる<br>・いいねボタンを追加で実装する | ・ログインをしている状態であること<br>・ユーザーは投稿画面からレシピを投稿する<br>・投稿者のみ編集/削除画面が表示される    | 
+| コメント機能         | ネストや中間テーブルの役割の実装方法を確認するため                                 | ・ユーザーはレシピ詳細画面でコメントを残すことができる                                                                                                                                                                                       | ・ログインをしている状態であること<br>・コメントをするとユーザー名と内容が表示される                                       | 
+| お気に入り（いいね） | Jsを使った非同期通信の実装方法を習得するため                                       | ・全てのユーザーはいいねボタンを押すことで、マイページにお気に入りとして表示させて管理することができる<br>・いいねを取り消すと、マイページからもいいねしていたレシピは削除される                                                             | ・いいねを１回押すとDBに情報が保存される<br>・２回目（いいねを取り消す）では、いいねしていたレシピの情報がDBから削除される | 
+| レシピ検索           | テーブルのマスタ化を学ぶため/利用者が効率的にレシピを閲覧できるため                | ・レシピを投稿する際、予め難易度や調理時間を選択する箇所がある<br>・ユーザーはレシピの難易度と調理時間を選択して検索することができる                                                                                                         | ・検索条件を指定する<br>・検索条件に当てはまるレシピのみが表示される<br>・何も指定せずに検索すると全てのレシピが表示される | 
+| 募金機能             | Pay.jpを利用した購入機能の実装を確認するため                                       | ・金額とカード情報を入力すると決済される                                                                                                                                                                                                     | ・金額と募金者のみDBに保存される                                                                                           | 
+| 商品検索             | 公開外部API（rakutenAPI）を用いた実装方法を習得するため                            | ・検索ボックスに文字を入力すると、楽天の商品一覧（最初の10商品）が表示される                                                                                                                                                                 | ・キーワード検索ができるよう、検索フォームを設ける<br>・検索フォームが空欄では何も表示されない                             | 
+| マイページ           | ユーザーがいいねを押したレシピを管理できるようにするため                           | ・自分の投稿したレシピと、いいねを押したレシピが表示される<br>・レシピをクリックすると、レシピの詳細に遷移できる                                                                                                                             | ・レシピの管理をする                                                                                                       | 
 
-| Column               | Type      | Options                         |
-| -------------------- | --------- | ------------------------------- |
-| recipes_name         | string    | null: false                     |
-| explains             | text      | null: false                     |
-| level_id             | integer   | null: false                     | 
-| cookingtime_id       | integer   | null: false                     |
-| user_id              | integer   | null: false                     |
+## ER図
+<img src="images/veganapp.png" width="420px">  
 
-## Association
-- belongs_to :level
-- belongs_to :cookingtime
-- belongs_to :user
-- has_many :comments
-- has_many :likes
-- has_many :liked_users, through: :likes, source: :user
-
-
-## levels テーブル
-
-| Column  | Type      | Options     |
-| --------| --------- | ----------- |
-| name    | string    | null: false |
-
-## Association
-- has_many :recipes
-
-
-
-## cookingtimes テーブル
-
-| Column | Type      | Options       |
-| -------| -------- -| ------------- |
-| name   | string    | null: false   |
-
-## Association
-- has_many :recipes
-
-
-
-## likes テーブル
-
-| Column | Type      | Options                       |
-| -------| -------- -| ------------------------------|
-| user   | references| null: false,foreign_key: true |
-| recipe | references| null: false,foreign_key: true |
-
-## Association
-- belongs_to :user
-- belongs_to :recipe
-
-
-
-## comments テーブル
-
-| Column            | Type      | Options                         |
-| ----------------- | --------- | ------------------------------- |
-| recipe            | references| null: false, foreign_key: true  |
-| user              | references| null: false, foreign_key: true  |
-| contents          | text      | null:false                      |
-
-## Association
- - belongs_to :recipe
- - belongs_to :user
-
-
-
-## donates テーブル
-
-| Column            | Type      | Options                         |
-| ----------------- | --------- | ------------------------------- |
-| user              | references| null: false, foreign_key: true  |
-| price             | integer   | null: false                     |
-
-
-## Association
-
-- belongs_to :user
+## インストール
+Rails 6.0.3.4  
+  
+% git clone https://github.com/misakikondo/vegan-app.git
+% bundle install
+% rails db:create
+% rails db:migrate
+% rails s
