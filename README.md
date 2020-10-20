@@ -56,11 +56,11 @@ cvc number: 123
 ## 機能説明
 
 ### レシピ検索機能
-![Videotogif](https://user-images.githubusercontent.com/70508952/96558974-683d4500-12f7-11eb-8365-32af6b97df02.gif)
+![Videotogif](https://user-images.githubusercontent.com/70508952/96558974-683d4500-12f7-11eb-8365-32af6b97df02.gif)  
 レシピの検索機能を用いて、自分のレベルに合ったレシピを検索できます。
 
 ### いいね機能
-![like](https://user-images.githubusercontent.com/70508952/96559346-e13c9c80-12f7-11eb-878f-08aa01d604f4.gif)
+![like](https://user-images.githubusercontent.com/70508952/96559346-e13c9c80-12f7-11eb-878f-08aa01d604f4.gif)  
 いいねボタンを押しマイページへ戻ると、いいねを押したレシピが保存されています。
 
 
