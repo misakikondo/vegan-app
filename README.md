@@ -1,4 +1,4 @@
-# Vegan Biginner  
+# Vegan Beginner  
 
 <img width="969" alt="toppage" src="https://user-images.githubusercontent.com/70508952/96553847-b733ac00-12f0-11eb-8b1f-6a494e71565b.png">
 <img width="987" alt="index" src="https://user-images.githubusercontent.com/70508952/96553883-c0247d80-12f0-11eb-99fb-53f69fe0a601.png">
