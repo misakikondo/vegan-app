@@ -55,13 +55,22 @@ cvc number: 123
 
 ## 機能説明
 
+### レシピ投稿機能
+![posting](https://user-images.githubusercontent.com/70508952/96670718-07ffdf00-139b-11eb-9b0a-93a1a840f695.gif)  
+画像・レシピ名・本文の他に、レベルやかかった時間を設定しておくことで、ユーザーが簡単にレシピを検索できます。  
+
 ### レシピ検索機能
-![Videotogif](https://user-images.githubusercontent.com/70508952/96558974-683d4500-12f7-11eb-8365-32af6b97df02.gif)  
+![search](https://user-images.githubusercontent.com/70508952/96670809-439aa900-139b-11eb-8f63-b541658f2e0d.gif)  
 レシピの検索機能を用いて、自分のレベルに合ったレシピを検索できます。  
 
 ### いいね機能
-![like](https://user-images.githubusercontent.com/70508952/96559346-e13c9c80-12f7-11eb-878f-08aa01d604f4.gif)  
+![like](https://user-images.githubusercontent.com/70508952/96670844-57dea600-139b-11eb-9c30-b020006c1441.gif)  
 いいねボタンを押しマイページへ戻ると、いいねを押したレシピが保存されています。  
+
+### 商品検索機能
+![rakutenapi](https://user-images.githubusercontent.com/70508952/96670897-780e6500-139b-11eb-8d66-ae2e9d5348b0.gif)  
+楽天商品検索APIを通じて、レシピに必要な商品が簡単に検索できます。
+
 
 ## ER図
 ![er-veganapp](https://user-images.githubusercontent.com/70508952/96666389-f960fa00-1391-11eb-80cd-aed3f799ea14.png) 
