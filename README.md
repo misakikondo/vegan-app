@@ -64,7 +64,7 @@ cvc number: 123
 いいねボタンを押しマイページへ戻ると、いいねを押したレシピが保存されています。  
 
 ## ER図
-![veganapp](https://user-images.githubusercontent.com/70508952/96553447-20ff8600-12f0-11eb-9c32-d4d278eecee5.png)  
+![er-veganapp](https://user-images.githubusercontent.com/70508952/96666389-f960fa00-1391-11eb-80cd-aed3f799ea14.png) 
 
 ## インストール
 Rails 6.0.3.4  
