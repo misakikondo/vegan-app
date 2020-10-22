@@ -1,103 +1,96 @@
-<%= render "shared/second-header"%> 
+<%= render "shared/header"%> 
 <%= render 'shared/error_messages', model: @comment %>
 
 <div class= "recipe-show">
 
-  <div class="show-main">
-    <div class= "main-left">
-  
+  <div class="show-main-container">
+    
+    <div class= "show-main-left">
       <div class= recipe-show-img>
         <%= image_tag @recipe.image, class: 'recipe_img' %>
       </div>
-
     </div>
 
-  <div class= "main-right">
-
-    <div class= "main-title">
+    <div class= "show-main-right">
+      
       <div class= "recipe-show-name">
-        <%= @recipe.recipes_name %>
+        <h1 class="recipe-show-name-font"><%= @recipe.recipes_name%></h1>
       </div>
 
       <div class= "show-recipe-edit-delete">
-        <%# <div class= "show-edit"> %>
           <% if current_user == @recipe.user %>
           <%= link_to '編集/', edit_recipe_path(@recipe.id) , method: :get, class: "recipe-edit-btn" %>
           <%= link_to '削除', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' , data: { confirm: 'Are you sure?' }%>
           <% end %>
-        <%# </div> %>
       </div>
 
-    </div>
-
-    <div class= "recipe-show-nickname">
-      <h1><%= @recipe.user.nickname %>さんのレシピです</h1>
-    </div>
+      <div class= "recipe-show-nickname">
+        <h1><%= @recipe.user.nickname %>さんのレシピです</h1>
+      </div>
 
 
-    <div class= "recipe-show-explain">
-      <%= safe_join(@recipe.explains.split("\n"),tag(:br)) %>
-    </div>
+      <div class= "recipe-show-explain">
+        <h1 class="recipe-show-explain-font"><%= safe_join(@recipe.explains.split("\n"),tag(:br)) %></h1>
+      </div>
 
 
-    <div class= "recipe-show-level">
-      <h1>Level: <%= @recipe.level.name %></h1>
-    </div>
+      <div class= "recipe-show-level">
+        <h1>Level: <%= @recipe.level.name %></h1>
+      </div>
 
-    <div class= "recipe-show-cookingtime">
-      <h1>Time: <%= @recipe.cookingtime.name %></h1>
-    </div>
+      <div class= "recipe-show-cookingtime">
+        <h1>Time: <%= @recipe.cookingtime.name %></h1>
+      </div>
 
-    <div class= "like-container">
-      <span id="recipe_<%= @recipe.id %>">
-        <%= render partial: 'recipe', locals: { recipe: @recipe } %>
-      </span>
-    </div>
+      <div class= "like-container">
+        <span id="recipe_<%= @recipe.id %>">
+          <%= render partial: 'recipe', locals: { recipe: @recipe } %>
+        </span>
+      </div>
 
-    <div class= btn-show>
-      <%= link_to 'Back', recipes_path, class: "recipe-back-btn" %>
+      <div class= btn-show>
+        <%= link_to 'Back', recipes_path, class: "recipe-back-btn" %>
+      </div>
     </div>
     
   </div>
 
-</div>
-
-
-<div class="comment-title">
-    <h5>Comment</h5>
-</div>
-
-<div class= "comment-container">
-
-  <div class="comment-box">
-    <% if current_user %>
-      <%= form_with model: [@recipe,@comment],url: recipe_comments_path(@recipe.id), method: :post, local: true do |f| %>
-      <%= f.text_area :contents, class:"comment-text",placeholder: "コメントを記入してください(100文字まで）" %>
-    <div class="comment-warn">
-        <h2>相手のことを考え丁寧なコメントを心がけましょう。</h2>
-        <h2>不快な言葉遣いなどは利用制限や退会処分となることがあります。</h2>
-    </div>
-      <button type="submit" class="comment-btn">
-      <% f.submit "submit", class: "comment-btn"%>
-        <h6>コメントする</h6>
-      </button>
-      <% end %>
-    <% else %>
-      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-    <% end %>
+  <div class="comment-title">
+    <h5 class="comment-font">Comment</h5>
   </div>
 
-
-  <div class="comment-index">
-  <h2>＜コメント一覧＞</h2>
-    <% if @comments %>
-      <% @comments.each do |comment| %>
-        <p>
-        <strong><%= comment.user.nickname %>：</strong>
-        <%= comment.contents %>
-        </p>
+  <div class= "comment-container">
+    <div class="comment-box">
+      <% if current_user %>
+        <%= form_with model: [@recipe,@comment],url: recipe_comments_path(@recipe.id), method: :post, local: true do |f| %>
+        <%= f.text_area :contents, class:"comment-text",placeholder: "コメントを記入してください(100文字まで）" %>
+      <div class="comment-warn">
+          <h2 class="attension">相手のことを考え丁寧なコメントを心がけましょう。</h2>
+          <h2 class="attension">不快な言葉遣いなどは利用制限や退会処分となることがあります。</h2>
+      </div>
+        <button type="submit" class="comment-btn">
+        <% f.submit "submit", class: "comment-btn"%>
+          <h6>コメントする</h6>
+        </button>
+        <% end %>
+      <% else %>
+        <strong><p class="attension">※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
       <% end %>
-    <% end %>
+    </div>
+
+
+    <div class="comment-index">
+    <h2>＜コメント一覧＞</h2>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+          <strong><%= comment.user.nickname %>：</strong>
+          <%= comment.contents %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+
   </div>
 
 </div>

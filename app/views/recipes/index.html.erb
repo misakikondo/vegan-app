@@ -1,66 +1,64 @@
-<%= render "shared/second-header"%> 
-<div class='recipe-index'>
+<%= render "shared/header"%> 
 
-  <div class= 'index-header'>
-    <div class= 'title'>
-      <h1>Recipes</h1>
+  <div class='recipe-container'>
+    <div class= 'index-header'>
+      <div class= 'title'>
+        <h1>Recipes</h1>
+      </div>
+      <div class= 'subtitle'>
+        <h2>ビーガンレシピを作ってみよう！レシピをシェアしよう！</h2>
+        <p>レベルと調理時間の検索ができます</p>
+      </div>
     </div>
-    <div class= 'subtitle'>
-      <h2>ビーガンレシピを作ってみよう！レシピをシェアしよう！</h2>
-      <p>レベルと調理時間の検索ができます</p>
-    </div>
-  </div>
 
 
-      <%= search_form_for @r, url: recipes_search_path do |f| %>
-    <div class= 'search-box'>
-      <div class="search-level">
-        <%= f.label :level_name_eq, 'レベル：' %>
-        <%= f.collection_select :level_name_eq, @level_name, :name, :name, include_blank: '指定なし' %>
-      </div>
+        <%= search_form_for @r, url: recipes_search_path do |f| %>
+      <div class= 'search-box'>
+        <div class="search-level">
+          <%= f.label :level_name_eq, 'レベル：' %>
+          <%= f.collection_select :level_name_eq, @level_name, :name, :name, include_blank: '指定なし' %>
+        </div>
 
-      <div class="search-cookintime">
-        <%= f.label :cookingtime_name_eq, '調理時間：' %>
-        <%= f.collection_select :cookingtime_name_eq, @cookingtime_name, :name, :name, include_blank: '指定なし' %>
-      </div>
+        <div class="search-cookintime">
+          <%= f.label :cookingtime_name_eq, '調理時間：' %>
+          <%= f.collection_select :cookingtime_name_eq, @cookingtime_name, :name, :name, include_blank: '指定なし' %>
+        </div>
 
-      <div class= "search-btn">
-        <%= f.submit '検索' %>
-      </div>
-    </div> 
-        <% end %>
+        <div class= "search-btn">
+          <%= f.submit '検索' %>
+        </div>
+      </div> 
+          <% end %>
 
 
-  <main class="main">
-    <div class="innner">
-      <div class="r-wrapper">
-        <% @recipes.each do |recipe| %>
-        <div class= "r-list">
-          <%= link_to recipe_path(recipe.id) do %> 
-          <%= image_tag recipe.image, class: "recipe-img" %>
-          <%end%>
-          <div class="r-body">
-            <div class='r-name'>
-              <h3><%= recipe.recipes_name %></h3>
-            </div>
-            <div class="r-likes">
-              <h3>LIKE: <%= recipe.likes.count %></h3>
+    <main class="main">
+      <div class="innner">
+        <div class="r-wrapper">
+          <% @recipes.each do |recipe| %>
+          <div class= "r-list">
+            <%= link_to recipe_path(recipe.id) do %> 
+            <%= image_tag recipe.image, class: "recipe-img" %>
+            <%end%>
+            <div class="r-body">
+              <div class='r-name'>
+                <h3><%= recipe.recipes_name %></h3>
+              </div>
+              <div class="r-likes">
+                <h3>LIKE: <%= recipe.likes.count %></h3>
+              </div>
             </div>
           </div>
+          <%end%> 
         </div>
-        <%end%> 
       </div>
+    </main>
+
+
+    <div class= 'index-footer'>
+    <div class="btn-text">
+      <%= link_to image_tag('share.png' , size: '300x200' ,class: "share-btn"), new_recipe_path %>
     </div>
-  </main>
-
-
-  <div class= 'index-footer'>
-    <div class='btn'>
-    <%= link_to image_tag('writing.png' , size: '300x200' ,class: "btn-text"), new_recipe_path %>
-    <span class='btn-text'><h4>Share</h4></span>
-  </div>
-</div>
-
+    </div>
 </div>
 
 <%= render "shared/second-footer"%> 

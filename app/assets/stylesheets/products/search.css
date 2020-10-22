@@ -5,3 +5,13 @@ a{
 .item-container {
   padding: 2vh;
 }
+
+.search-main{
+  background-color: antiquewhite;
+}
+
+.product-container{
+  background-color: antiquewhite;
+  padding-bottom: 300px;
+  
+}

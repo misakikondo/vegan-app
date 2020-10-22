@@ -61,3 +61,9 @@
   width:80vw;
   height:40vh;
 }
+
+@media (max-width: 599px) {
+  .title-new-edit {
+    font-size: 20px;
+  }
+}
