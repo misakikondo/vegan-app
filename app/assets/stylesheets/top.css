@@ -34,9 +34,12 @@ ul {
 }
 
 .second-container-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color:  #D2B48C;
   padding: 2vw;
-  text-align: center;
+  text-align: left;
 }
 
 .second-img {
@@ -52,3 +55,57 @@ ul {
   font-size: 14px;
 }
 
+@media (max-width: 1024px) {
+  .lists {
+    font-size: 40px;
+  }
+
+  .second-img {
+    width: 80%;
+  }
+
+  .second-container-right {
+    width: 100%;
+  }
+
+  .vegan-explain-logo {
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .vegan-explain {
+    font-size: 12px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 599px) {
+  ul {
+    padding-bottom: 2vh;
+  }
+
+  .lists {
+    font-size: 25px;
+  }
+
+  .second-img {
+    width: 0%;
+  }
+
+  .second-container {
+    flex-direction: column;
+  }
+
+  .second-container-right {
+    width: 100%;
+  }
+
+  .vegan-explain-logo {
+    font-size: 12px;
+    text-align: left;
+  }
+  .vegan-explain {
+    font-size: 8px;
+    text-align: left;
+  }
+ }
