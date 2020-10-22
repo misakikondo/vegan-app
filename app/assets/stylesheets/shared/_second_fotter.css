@@ -1,6 +1,6 @@
 .second-fotter {
   width: 100%;
-  min-width: 800px;
+  /* min-width: 800px; */
   height: 17vh;
   background-color:#709365;
   display: flex;
@@ -24,4 +24,10 @@
   height: 60px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 599px) {
+  .second-fotter-logo {
+   width: 50%;
+  }
 }
