@@ -1,7 +1,7 @@
 # Vegan Beginner  
 
 <img width="1000" alt="toppage" src="https://user-images.githubusercontent.com/70508952/96818608-bf105f00-145c-11eb-9935-1668c7ddb209.png">
-<img width="1000" alt="recipe-index" src="https://user-images.githubusercontent.com/70508952/96818633-cc2d4e00-145c-11eb-99d4-5998f619530f.png">
+<img width="1000" alt="recipe-index" src="https://user-images.githubusercontent.com/70508952/96818633-cc2d4e00-145c-11eb-99d4-5998f619530f.png">  
 
 ## new Read/概要  
 This is a recipe sharing application for pepole who is looking for Vegan recipes.  
@@ -68,7 +68,7 @@ cvc number: 123
 いいねボタンを押しマイページへ戻ると、いいねを押したレシピが保存されています。  
 
 ### 商品検索機能
-![rakutenapi](https://user-images.githubusercontent.com/70508952/96670897-780e6500-139b-11eb-8d66-ae2e9d5348b0.gif)  
+![products](https://user-images.githubusercontent.com/70508952/96870981-9f088c00-14ac-11eb-8699-d5a1b3ab0528.gif)  
 楽天商品検索APIを通じて、レシピに必要な商品が簡単に検索できます。
 
 
