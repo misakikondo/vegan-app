@@ -1,29 +1,31 @@
 <%= render "shared/header"%> 
 
-<div class= "product-container">
-  <div class= 'title'>
-    <h1>Search Your Products!</h1>
+<div class="search-main">
+  <div class= "product-container">
+    <div class= 'title'>
+      <h1>Search Your Products!</h1>
+    </div>
+
+    <div class= 'subtitle'>
+    <h2>Vegan製品を検索してみよう！</h2>
+    </div>
+
+    <div class="search-box">
+    <%= form_with url:product_search_path, method: :get, local: true do |f| %>
+      <%= f.text_field :keyword, placeholder: "ヴィーガン", autocomplete: 'off' %>
+      <%= f.submit "検索" , :name => nil%>
+    <% end %>
+    </div>
+
+    <div class= 'subtitle'>
+      <h2>検索結果</h2>
+    </div>
+
+    <div class= "products-list">
+      <%= render partial: 'product_list' %>
+    </div>
+
   </div>
-
-  <div class= 'subtitle'>
-  <h2>Vegan製品を検索してみよう！</h2>
-  </div>
-
-  <div class="search-box">
-  <%= form_with url:product_search_path, method: :get, local: true do |f| %>
-    <%= f.text_field :keyword, placeholder: "ヴィーガン", autocomplete: 'off' %>
-    <%= f.submit "検索" , :name => nil%>
-  <% end %>
-  </div>
-
-<div class= 'subtitle'>
-  <h2>検索結果</h2>
-</div>
-
-  <div class= "products-list">
-     <%= render partial: 'product_list' %>
-  </div>
-
 </div>
 
 <%= render "shared/second-footer"%> 
