@@ -2,43 +2,53 @@
 
 <div class= "mypage">
     <h2><%= @user.nickname%>さんのマイページ</h2>
-    <h1>投稿したレシピ</h1>
-    <div class="recipes-container">
-    <% @user.recipes.each do |recipe| %>
-      <li class='list'>
-      <%= link_to recipe_path(recipe.id) do %> 
-        <div class='index-recipe-image'>
+    
+    <h4 class= "mypage-subtitle">投稿したレシピ</h4>
+    <main class="main">
+    <div class="innner">
+      <div class="r-wrapper">
+        <% @user.recipes.each do |recipe| %>
+        <div class= "r-list">
+          <%= link_to recipe_path(recipe.id) do %> 
           <%= image_tag recipe.image, class: "recipe-img" %>
+          <%end%>
+          <div class="r-body">
+            <div class='r-name'>
+              <h3><%= recipe.recipes_name %></h3>
+            </div>
+            <div class="r-likes">
+              <h3>LIKE: <%= recipe.likes.count %></h3>
+            </div>
+          </div>
         </div>
-        <div class='index-recipe-info'>
-          <h3 class='index-recipes-name'>
-            <%= recipe.recipes_name %>
-          </h3>
-        </div>
-      <%end%>
-      <h2>LIKE: <%= recipe.likes.count %></h2>
-      </li>
-    <%end%> 
-    </div> 
+        <%end%> 
+      </div>
+    </div>
+  </main>
 
-  <h1>いいねを押したレシピ</h1>
-    <div class="recipes-container">
-    <% @user.liked_recipes.each do |recipe| %>
-      <li class='list'>
-      <%= link_to recipe_path(recipe.id) do %> 
-        <div class='index-recipe-image'>
+
+  <h4 class= "mypage-subtitle">いいねを押したレシピ</h4>
+    <main class="main">
+    <div class="innner">
+      <div class="r-wrapper">
+        <% @user.liked_recipes.each do |recipe| %>
+        <div class= "r-list">
+          <%= link_to recipe_path(recipe.id) do %> 
           <%= image_tag recipe.image, class: "recipe-img" %>
+          <%end%>
+          <div class="r-body">
+            <div class='r-name'>
+              <h3><%= recipe.recipes_name %></h3>
+            </div>
+            <div class="r-likes">
+              <h3>LIKE: <%= recipe.likes.count %></h3>
+            </div>
+          </div>
         </div>
-        <div class='index-recipe-info'>
-          <h3 class='index-recipes-name'>
-            <%= recipe.recipes_name %>
-          </h3>
-        </div>
-      <%end%>
-      <h2>LIKE: <%= recipe.likes.count %></h2>
-      </li>
-    <%end%> 
-    </div> 
+        <%end%> 
+      </div>
+    </div>
+  </main>
 
  </div>
 

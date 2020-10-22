@@ -1,3 +1,9 @@
 .mypage{
   background-color: antiquewhite;
 }
+
+.mypage-subtitle{
+  padding: 2vh;
+  font-weight: bold;
+  font-size: 20px;
+}

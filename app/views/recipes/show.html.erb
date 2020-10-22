@@ -36,7 +36,7 @@
 
 
     <div class= "recipe-show-explain">
-      <%= @recipe.explains %>
+      <%= safe_join(@recipe.explains.split("\n"),tag(:br)) %>
     </div>
 
 

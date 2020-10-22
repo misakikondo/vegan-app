@@ -74,18 +74,6 @@
   padding-top: 2vh;
 }
 
-h5 {
-  font-family: 'Abril Fatface', cursive;
-  text-align: center;
-  color:  #709365;
-}
-/* 
-.show-footer {
-  display: flex;
-  justify-content: space-around;
-  background-color: antiquewhite;
-} */
-
 .comment-title {
   font-size: 30px;
   font-weight: 900;

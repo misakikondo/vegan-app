@@ -1,8 +1,8 @@
 <%= render "shared/header" %>
 
-<main>
+<div class="top-main">
 
-  <div class= main-header>
+  <div class= "main-header">
     <ul>
       <li><%= link_to 'Recipes',  recipes_path, class: "lists" %></li> 
       <li><%= link_to 'Donation', donates_path, class: "lists" %></li> 
@@ -10,27 +10,36 @@
     </ul>
   </div>
 
-  <div class= main-container>
-    <div class= first-container>
-    <%= image_tag 'top0.png' %>
+  <div class= "main-container">
+    <div class= "top-img-container">
+    <%= image_tag 'top0.png', class: 'top-img' %>
     </div>
 
-    <div class= second-container>
-
-      <div class= second-container-left>
-        <div class= whiteback>
-          <h1>aaa</h1>
-        </div>
+    <div class= "second-container">
+      <div class= "second-container-right">
+        <%= image_tag 'top2.jpeg', class: 'second-img'%>
       </div>
-     <div class= second-container-right>
-        <%= image_tag 'top1.png', :size => '610x650'%>
+      <div class= "second-container-left">
+        <h4 class="vegan-explain-logo">What's Vegan?</h4>
+        <h1 class="vegan-explain">定義 ビーガンは魚介類や肉類、卵や乳製品など動物由来のものを<br>
+        一切とらない絶対菜食主義者のことです。ベジタリアンと混同される事がありますが、<br>
+        卵や乳製品を食べるのに対し、ビーガンは、それらも一切口にしません。<br>
+        人によっては食品だけではなく服やシャンプーなどの生活用品も使用しません。<br>
+        </h1>
+        <br>
+        <h4 class="vegan-explain-logo">What's Vegan Beginner?</h4>
+        <h1 class="vegan-explain">レシピ投稿機能を使って、ヴィーガンレシピをシェアしましょう！<br>
+        検索機能を使ってお気に入りのレシピを見つけたら、<br>
+        いいねを押してマイページから簡単に管理。<br>
+        その他商品検索機能で欲しい商品を検索したり、<br>
+        寄付をしてヴィーガンライフを支持することもできます。<br>
+        </h1>
       </div>
-
     </div>  
 
   </div>
 
-</main>
+</div>
 
 
 

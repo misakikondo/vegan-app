@@ -49,8 +49,8 @@ class RecipesController < ApplicationController
   end
 
   def search
-    @results = @r.result.includes(:level)
-    @results = @r.result.includes(:cookingtime)
+    @results = @r.result.includes(:level).order('created_at DESC')
+    @results = @r.result.includes(:cookingtime).order('created_at DESC')
   end
 
   private

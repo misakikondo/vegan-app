@@ -1,4 +1,33 @@
-.recipe-index{
+h1 {
+  font-family: 'Abril Fatface', cursive;
+}
+
+h2 {
+  font-family: 'Abril Fatface', cursive;
+  color: #878986;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-family: 'Kosugi', sans-serif;
+  color: #878986;
+  padding-bottom: 20px;
+}
+
+h4 {
+  color: #DB5C35;
+  font-family: 'Abril Fatface', cursive;
+}
+
+h5 {
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+  color:  #709365;
+}
+
+
+
+.recipe-index {
   background-color: antiquewhite;
 }
 
@@ -20,37 +49,53 @@
   padding-left: 2vh;
 }
 
-
-.index-main {
+.main {
   background-color: antiquewhite;
 }
 
-.recipes-container{
+
+.innner {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.r-wrapper{
   display: flex;
-  height: 90vh;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: center;
 }
 
-.index-recipe-image {
-  position: relative;
+.r-list {
+  width: calc((100% - 75px) / 4);
+  margin-bottom: 40px;
 }
 
-.recipe-img {
-  width: 33vh;
-  height: 40vh;
+.recipe-img{
+  padding: 4vw;
+  padding-bottom: 0px;
+  width: 320px;
+  height: 400px;
+  filter: drop-shadow(10px 2px 4px black);
 }
 
-.index-recipe-name {
-  text-decoration: none;
-  font-family: 'Abril Fatface', cursive;
+.recipe-img:hover{
+  transform: translate(0, -10px);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 
-li {
-  list-style: none;
+.r-body{
+  padding-left: 6vw;
 }
 
-.list {
-  width: 37vh;
-  padding: 1vw;
+.r-name{
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.r-like{
+  font-size: 15px;
 }
 
 .title {
@@ -89,7 +134,7 @@ li {
   color: black;
 }
 
-h4{
-  color: #DB5C35;
-  font-family: 'Abril Fatface', cursive;
+
+@media (max-width: 1024px) {
+
 }

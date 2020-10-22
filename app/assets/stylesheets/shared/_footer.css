@@ -7,9 +7,15 @@ footer {
   color: aliceblue;
 }
 
-.footer-title {
+.footer-message {
   font-style: italic;
   text-align: center;
   font-size: 30px;
   color: antiquewhite;
 }
+
+@media (max-width: 1024px) {
+  .footer-message{
+    font-size: 14px;
+  }
+ }

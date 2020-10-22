@@ -1,23 +1,29 @@
 <%= render "shared/second-header"%> 
 
 <div class= 'saerch-main'>
-
+  <div class= 'title'>
+    <h1>Results</h1>
+  </div>
   <div class="recipes-container">
     <% if @results.length !=0 %>
-    <% @results.each do |result| %>
-    <li class='list'>
-      <%= link_to recipe_path(result.id) do %> 
-      <div class='index-recipe-image'>
-        <%= image_tag result.image, class: "recipe-img" %>
+  <main class="main">
+    <div class="innner">
+      <div class="r-wrapper">
+        <% @results.each do |result| %>
+        <div class= "r-list">
+          <%= link_to recipe_path(result.id) do %> 
+          <%= image_tag result.image, class: "recipe-img" %>
+          <%end%>
+          <div class="r-body">
+            <div class='r-name'>
+              <h3><%= result.recipes_name %></h3>
+            </div>
+          </div>
+        </div>
+        <%end%> 
       </div>
-      <div class='index-recipe-info'>
-        <h3 class='index-recipes-name'>
-        <%= result.recipes_name %> 
-        </h3>
-      </div>
-      <%end%>
-    </li>
-    <%end%> 
+    </div>
+  </main> 
   <% else %>
   <h2>該当するレシピはありません</h2>
   <% end %>
