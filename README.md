@@ -1,7 +1,7 @@
 # Vegan Beginner  
 
-<img width="969" alt="toppage" src="https://user-images.githubusercontent.com/70508952/96553847-b733ac00-12f0-11eb-8b1f-6a494e71565b.png">
-<img width="987" alt="index" src="https://user-images.githubusercontent.com/70508952/96553883-c0247d80-12f0-11eb-99fb-53f69fe0a601.png">
+<img width="1000" alt="toppage" src="https://user-images.githubusercontent.com/70508952/96818608-bf105f00-145c-11eb-9935-1668c7ddb209.png">
+<img width="1000" alt="recipe-index" src="https://user-images.githubusercontent.com/70508952/96818633-cc2d4e00-145c-11eb-99d4-5998f619530f.png">
 
 ## new Read/概要  
 This is a recipe sharing application for pepole who is looking for Vegan recipes.  
@@ -26,11 +26,11 @@ https://veganapp-0718.herokuapp.com/
 ID: misaki  
 Password: 1111  
   
-#### テスト用アカウント
+#### Test Account / テスト用アカウント
 ID: hello.veganapp@gmail.com  
 Password: 19921992m  
 
-#### ドネーションテスト用カード情報
+#### Test Creditcard Number / ドネーションテスト用クレジットカード情報
 CardNumber: 4242424242424242  
 exp month: 3  
 exp year: 24  
@@ -53,18 +53,18 @@ cvc number: 123
 | 商品検索             | 公開外部API（rakutenAPI）を用いた実装方法を習得するため                            | ・検索ボックスに文字を入力すると、楽天の商品一覧（最初の10商品）が表示される                                                                                                                                                                 | ・キーワード検索ができるよう、検索フォームを設ける<br>・検索フォームが空欄では何も表示されない                             | 
 | マイページ           | ユーザーがいいねを押したレシピを管理できるようにするため                           | ・自分の投稿したレシピと、いいねを押したレシピが表示される<br>・レシピをクリックすると、レシピの詳細に遷移できる                                                                                                                             | ・レシピの管理をする                                                                                                       | 
 
-## 機能説明
+## Dispriction / 機能説明
 
 ### レシピ投稿機能
-![posting](https://user-images.githubusercontent.com/70508952/96670718-07ffdf00-139b-11eb-9b0a-93a1a840f695.gif)  
+![posting](https://user-images.githubusercontent.com/70508952/96809044-16123600-1455-11eb-9805-bd7d3e422d5d.gif)  
 画像・レシピ名・本文の他に、レベルやかかった時間を設定しておくことで、ユーザーが簡単にレシピを検索できます。  
 
 ### レシピ検索機能
-![search](https://user-images.githubusercontent.com/70508952/96670809-439aa900-139b-11eb-8f63-b541658f2e0d.gif)  
+![search](https://user-images.githubusercontent.com/70508952/96818124-cf740a00-145b-11eb-9a32-7071b880abd1.gif)  
 レシピの検索機能を用いて、自分のレベルに合ったレシピを検索できます。  
 
 ### いいね機能
-![like](https://user-images.githubusercontent.com/70508952/96670844-57dea600-139b-11eb-9c30-b020006c1441.gif)  
+![liked](https://user-images.githubusercontent.com/70508952/96818172-e61a6100-145b-11eb-9a43-d87919569938.gif)  
 いいねボタンを押しマイページへ戻ると、いいねを押したレシピが保存されています。  
 
 ### 商品検索機能
@@ -72,10 +72,10 @@ cvc number: 123
 楽天商品検索APIを通じて、レシピに必要な商品が簡単に検索できます。
 
 
-## ER図
+## ER Map
 ![er-veganapp](https://user-images.githubusercontent.com/70508952/96666389-f960fa00-1391-11eb-80cd-aed3f799ea14.png) 
 
-## インストール
+## Install
 Rails 6.0.3.4  
   
 % git clone https://github.com/misakikondo/vegan-app.git  
