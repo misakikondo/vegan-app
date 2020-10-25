@@ -79,13 +79,17 @@ ul {
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 560px) {
   ul {
     padding-bottom: 2vh;
   }
 
   .lists {
-    font-size: 25px;
+    font-size: 20px;
+  }
+
+  .top-img{
+    padding-top: 10px;
   }
 
   .second-img {

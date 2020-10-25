@@ -167,9 +167,18 @@ h5 {
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 560px) {
+  .recipe-index-subtitle {
+    font-size: 12px;
+  }
+
   .search-box {
-    width: 80%;
+    width: 90%;
+  }
+
+  .search-level,
+  .search-cookingtime {
+    text-align: center;
   }
 
   .search-btn {
@@ -205,6 +214,7 @@ h5 {
   .r-name {
     padding: 1vh;
     font-size: 12px;
+    width: 100px;
   }
 
   .r-likes {
