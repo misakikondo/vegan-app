@@ -4,11 +4,14 @@
 <img width="1000" alt="recipe-index" src="https://user-images.githubusercontent.com/70508952/96818633-cc2d4e00-145c-11eb-99d4-5998f619530f.png">  
 
 ## new Read/概要  
-This is a recipe sharing application for pepole who is looking for Vegan recipes.  
+This is a recipe sharing application for pepole who are looking for Vegan recipes.  
+Search, save, and add delicious vegan recipes to your profile page.  
+After saving recipes you can buy the ingredients you need on Rakuten.  
+Users can support and help the Vegan Beginner by donation.  
 ヴィーガンに興味のあるの方のための、ヴィーガンレシピサイトです。  
 レシピの投稿や、自分に合ったレシピを検索・閲覧・管理することができます。  
 レシピを見て、グッズが欲しくなった時には楽天APIの商品検索機能でそのまま購入することもできます。  
-ヴィーガンライフスタイルを支持できるドネーション機能も設けました。  
+ヴィーガンライフスタイルを支持できるドネーション機能も設けました。   
 
 ## Usage/利用方法
 （全てログイン後に行ってください）  
@@ -38,7 +41,7 @@ cvc number: 123
   
 ## 目指した課題解決
 ヴィーガンに関心がある流行に敏感な主に20代から40代の女性の、  
-初めにどのようにしてヴィーガンのライフスタイルを自身の生活に取り入れて行けば良いかという疑問を解消するため。  
+どのようにしてヴィーガンのライフスタイルを自身の生活に取り入れて行けば良いかという疑問を解消するため。  
 
 ## 洗い出した要件
 
@@ -53,27 +56,28 @@ cvc number: 123
 | 商品検索             | 公開外部API（rakutenAPI）を用いた実装方法を習得するため                            | ・検索ボックスに文字を入力すると、楽天の商品一覧（最初の10商品）が表示される                                                                                                                                                                 | ・キーワード検索ができるよう、検索フォームを設ける<br>・検索フォームが空欄では何も表示されない                             | 
 | マイページ           | ユーザーがいいねを押したレシピを管理できるようにするため                           | ・自分の投稿したレシピと、いいねを押したレシピが表示される<br>・レシピをクリックすると、レシピの詳細に遷移できる                                                                                                                             | ・レシピの管理をする                                                                                                       | 
 
-## Dispriction / 機能説明
+## Dispriction / 機能説明  
 
-### レシピ投稿機能
-![posting](https://user-images.githubusercontent.com/70508952/96809044-16123600-1455-11eb-9805-bd7d3e422d5d.gif)  
+### レシピ投稿機能  
 画像・レシピ名・本文の他に、レベルやかかった時間を設定しておくことで、ユーザーが簡単にレシピを検索できます。  
+![posting](https://user-images.githubusercontent.com/70508952/96809044-16123600-1455-11eb-9805-bd7d3e422d5d.gif)  
 
-### レシピ検索機能
-![search](https://user-images.githubusercontent.com/70508952/96818124-cf740a00-145b-11eb-9a32-7071b880abd1.gif)  
+### レシピ検索機能  
 レシピの検索機能を用いて、自分のレベルに合ったレシピを検索できます。  
+![search](https://user-images.githubusercontent.com/70508952/96818124-cf740a00-145b-11eb-9a32-7071b880abd1.gif)  
 
-### いいね機能
-![liked](https://user-images.githubusercontent.com/70508952/96818172-e61a6100-145b-11eb-9a43-d87919569938.gif)  
+### いいね機能  
 いいねボタンを押しマイページへ戻ると、いいねを押したレシピが保存されています。  
+![liked](https://user-images.githubusercontent.com/70508952/96818172-e61a6100-145b-11eb-9a43-d87919569938.gif)  
 
-### 商品検索機能
+### 商品検索機能  
+楽天商品検索APIを通じて、レシピに必要な商品が簡単に検索できます。  
 ![products](https://user-images.githubusercontent.com/70508952/96870981-9f088c00-14ac-11eb-8699-d5a1b3ab0528.gif)  
-楽天商品検索APIを通じて、レシピに必要な商品が簡単に検索できます。
 
 
-## ER Map
-![er-veganapp](https://user-images.githubusercontent.com/70508952/96666389-f960fa00-1391-11eb-80cd-aed3f799ea14.png) 
+## ER Map  
+![er-veganapp](https://user-images.githubusercontent.com/70508952/96666389-f960fa00-1391-11eb-80cd-aed3f799ea14.png)  
+
 
 ## Install
 Rails 6.0.3.4  
