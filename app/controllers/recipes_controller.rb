@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :authenticate_user!,  only: :new
+  before_action :authenticate_user!,  only: [:new, :show]
   before_action :find_recipe, only: [:show, :edit, :update, :destroy]
   before_action :search_recipe, only: [:index, :search]
 
