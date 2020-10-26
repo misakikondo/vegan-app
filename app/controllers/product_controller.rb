@@ -1,5 +1,5 @@
 class ProductController < ApplicationController
- require 'rakuten_web_service'
+  require 'rakuten_web_service'
 
   def search
     if params[:keyword].present?
@@ -8,5 +8,4 @@ class ProductController < ApplicationController
       render :search
     end
   end
-
 end
