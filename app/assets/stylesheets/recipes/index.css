@@ -168,6 +168,10 @@ h5 {
 }
 
 @media (max-width: 560px) {
+  .common-sub-title {
+    font-size: 25px;
+  }
+
   .recipe-index-subtitle {
     font-size: 12px;
   }

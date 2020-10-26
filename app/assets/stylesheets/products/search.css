@@ -15,3 +15,13 @@ a{
   padding-bottom: 300px;
   
 }
+
+@media (max-width: 560px) {
+  .commom-sub-title {
+    font-size: 25px;
+  }
+
+  .product-subtitle-explain {
+    font-size: 12px;
+  }
+}

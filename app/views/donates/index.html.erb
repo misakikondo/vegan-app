@@ -2,28 +2,16 @@
  <%= render 'shared/error_messages', model: @donate %>
 
 <div class= "donation-container">
-  <div class="donation=logo">
   <div class= 'title'>
-    <h1>Donation</h1>
-  </div>
+    <h1 class="common-sub-title">Donation</h1>
   </div>
 
   <div class="donation-info">
 
     <div class="donate">
-      <%= image_tag 'cow.jpeg', :size => '350x250'%>
-      <h1>¥1000の募金でこの活動を広めるのに役立てます</h1>
+      <%= image_tag 'donation-pic.jpeg', class: 'donation-pic' %>
+      <h1 class="donation-explain">VeganBeginnerへの活動を支援くださいませ。</h1>
     </div>
-
-    <div class="donate">
-      <%= image_tag 'chicken.jpeg', :size => '350x250'%>
-      <h1>¥2000の募金で100羽のひよこの命を救えます</h1>
-    </div>
-
-    <div class="donate">
-      <%= image_tag 'pig.jpeg', :size => '350x250'%>
-      <h1>¥5000の募金で豚の生活環境を改善できます</h1>
-    </div> 
 
   </div>
 

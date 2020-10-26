@@ -79,12 +79,17 @@
 @media (max-width: 599px) {
   
   .user-nickname {
-    font-size: 18px;
+    font-size: 12px;
   }
 
   .logout,
   .login,
-  .sing-up{
-    font-size: 16px;
+  .sing-up {
+    font-size: 12px;
+  }
+
+  .vegan-logo {
+    width: 66px;
+    height: 27px;
   }
 }

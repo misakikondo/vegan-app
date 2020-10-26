@@ -1,6 +1,7 @@
 .donation-container{
   background-color:antiquewhite;
   height: 100%;
+  width: 100%;
 }
 
 .donation-info{
@@ -8,6 +9,10 @@
   justify-content: space-around;
   padding: 2vh;
   text-align: center;
+}
+
+.donation-pic {
+  width: 100%;
 }
 
 .form-donate-wrap{
@@ -23,7 +28,22 @@
 .cvc,
 .exp_month,
 .exp_year{
-  background-color:antiquewhite;
   height: 100%;
+  width: 120px;
   text-decoration: none;
+}
+
+@media (max-width: 560px) {
+  .donation-explain {
+    font-size: 12px;
+  }
+  .price,
+  .number,
+  .cvc,
+  .exp_month,
+  .exp_year{
+    height: 100%;
+    width: 100px;
+    text-decoration: none;
+  }
 }
