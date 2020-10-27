@@ -11,7 +11,7 @@
   text-align: center;
 }
 
-.donation-pic {
+.donation-pic{
   width: 100%;
 }
 
@@ -20,6 +20,24 @@
   height: 100%;
   text-align: center;
   padding: 2vh;
+}
+
+.button{
+  text-decoration: none;
+  width: 50%;
+  background: #709365;
+  border: 1px solid #709365;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color:#C87066;
+  border: 1px solid #C87066;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 

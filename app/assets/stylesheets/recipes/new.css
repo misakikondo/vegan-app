@@ -49,6 +49,13 @@
   cursor: pointer;
 }
 
+.new-btn-text:hover{
+  background-color:#C87066;
+  border: 1px solid #C87066;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
 
 .recipes-text {
   resize: none;

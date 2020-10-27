@@ -17,6 +17,7 @@ ul {
   font-family: 'Sansita Swashed', cursive;
   color: white;
   font-size: 4vw;
+  text-shadow:3px 3px 0px gray;
 }
 
 .top-img-container {
