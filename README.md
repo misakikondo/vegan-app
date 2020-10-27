@@ -4,7 +4,7 @@
 <img width="1000" alt="recipe-index" src="https://user-images.githubusercontent.com/70508952/96818633-cc2d4e00-145c-11eb-99d4-5998f619530f.png">  
   
 Responsive Design  
-<img width="318" alt="top-iphone" src="https://user-images.githubusercontent.com/  70508952/97281036-5e2fbf00-1880-11eb-9352-eb816afc1053.png">
+<img width="318" alt="top-iphone" src="https://user-images.githubusercontent.com/70508952/97281036-5e2fbf00-1880-11eb-9352-eb816afc1053.png">
 <img width="314" alt="recipe-iphone" src="https://user-images.githubusercontent.com/70508952/97281049-625bdc80-1880-11eb-9956-8b7d07a6a1b6.png">
 
 ## new Read/概要  
