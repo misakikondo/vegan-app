@@ -2,12 +2,16 @@
   box-sizing: border-box;
 }
 
+header {
+  position: sticky;
+  top: 0;
+}
+
 .top-page-header {
   width: 100vw;
-  padding: 2vh 2vw;
+  padding: 0 2vw;
   display: flex;
   background-color: #709365;
-
 }
 
 .vegan-logo {

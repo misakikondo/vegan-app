@@ -25,8 +25,11 @@
     </div>
   </main> 
   <% else %>
-  <h2>該当するレシピはありません</h2>
-  <% end %>
+  <div class='no-result'>
+    <h2>該当するレシピはありません。</h2>
+    <p>シェアしてみませんか？</p>
+    <%= link_to 'Share!', new_recipe_path %>
+    <% end %>
   </div> 
 
   <div class= btn-search>
@@ -34,5 +37,3 @@
   </div>
 
 </div>
-
-<%= render "shared/second-footer"%> 

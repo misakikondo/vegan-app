@@ -1,5 +1,6 @@
 .mypage{
   background-color: antiquewhite;
+  min-height:100vh;
 }
 
 .mypage-subtitle{

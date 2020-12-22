@@ -8,12 +8,11 @@ a{
 
 .search-main{
   background-color: antiquewhite;
+  min-height:100vh;
 }
 
 .product-container{
   background-color: antiquewhite;
-  padding-bottom: 300px;
-  
 }
 
 @media (max-width: 560px) {

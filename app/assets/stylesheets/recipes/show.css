@@ -76,8 +76,8 @@
 .comment-title {
   font-size: 30px;
   font-weight: 900;
-  padding: 2vh;
   background-color: antiquewhite;
+  padding-top: 100px;
 }
 
 .comment-container {
@@ -142,7 +142,7 @@
   .recipe-show-explain-font{
     font-size: 14px;
   }
-  
+
   .comment-font{
     font-size: 20px
   }
