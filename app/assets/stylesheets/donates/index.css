@@ -11,6 +11,14 @@
   text-align: center;
 }
 
+.donation-explain{
+  padding-top: 10px;
+}
+
+.donation-sub-explain{
+  font-size: 11px;
+}
+
 .donation-pic{
   width: 100%;
 }
@@ -19,6 +27,7 @@
   background-color:antiquewhite;
   height: 100%;
   text-align: center;
+  display: block;
   padding: 2vh;
 }
 

@@ -10,7 +10,8 @@
 
     <div class="donate">
       <%= image_tag 'donation-pic.jpeg', class: 'donation-pic' %>
-      <h1 class="donation-explain">VeganBeginnerへの活動を支援くださいませ。</h1>
+      <h2 class="donation-explain">VeganBeginnerへの活動を支援くださいませ。</h2>
+      <p class='donation-sub-explain'>ヴィーガンを多くの人に知ってもらう広告費として大切に使われます。</p>
     </div>
 
   </div>
@@ -18,27 +19,25 @@
   <%= form_with  model: @donate, id: 'charge-form', class: 'card-form',local: true do |f| %>
 
   <div class='form-donate-wrap'>
-    <%= f.label :price, "金額" %>
-    <%= f.text_field :price, class:"price", placeholder:"¥500以上" %>
+    <div><%= f.label :price, "金額" %></div>
+    <div><%= f.text_field :price, class:"price", placeholder:"¥500以上" %></div>
   </div>
   
   <div class='form-donate-wrap'>
-    <%= f.label :number,  "カード番号" %>
-    <%= f.text_field :number, class:"number", placeholder:"カード番号(半角数字)", maxlength:"16" %>
+    <div><%= f.label :number,  "カード番号" %></div>
+    <div><%= f.text_field :number, class:"number", placeholder:"カード番号(半角)", maxlength:"16" %></div>
   </div>
   
   <div class='form-donate-wrap'>
-    <%= f.label :cvc ,"ＣＶＣ" %>
-    <%= f.text_field :cvc, class:"cvc", placeholder:"4桁もしくは3桁の番号", maxlength:"4" %>
+    <div><%= f.label :cvc ,"ＣＶＣ" %></div>
+    <div><%= f.text_field :cvc, class:"cvc", placeholder:"4桁もしくは3桁の番号", maxlength:"4" %></div>
   </div>
   
   <div class='form-donate-wrap'>
     <p>有効期限</p>
     <div class='input-expiration-date-wrap'>
-      <%= f.text_field :exp_month, class:"exp_month", placeholder:"例)3" %>
-      <p>月</p>
-      <%= f.text_field :exp_year, class:"exp_year", placeholder:"例)24" %>
-      <p>年</p>
+      <%= f.text_field :exp_month, class:"exp_month", placeholder:"例)3" %>月
+      <%= f.text_field :exp_year, class:"exp_year", placeholder:"例)24" %>年
     </div>
   </div>
 
