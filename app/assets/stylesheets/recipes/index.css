@@ -1,3 +1,5 @@
+/* 全ページ共通 */
+
 h1 {
   font-family: 'Abril Fatface', cursive;
 }
@@ -25,6 +27,8 @@ h5 {
   color:  #709365;
 }
 
+/* ここまで */
+
 
 
 .recipe-container {
@@ -51,13 +55,22 @@ h5 {
   padding-left: 2vh;
 }
 
+.recipe-link {
+
+  text-align: center;
+}
+
+.recipe-link-text {
+  color:#DB5C35;
+  font-weight: bolder;
+}
+
 .main {
   background-color: antiquewhite;
 }
 
 
 .innner {
-  /* width: 1024px; */
   margin: 0 auto;
 }
 

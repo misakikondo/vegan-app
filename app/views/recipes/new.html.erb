@@ -1,21 +1,19 @@
 <%= render "shared/header"%> 
 <div class='recipe-post'>
 
-<div class= 'post-header'>
+  <div class= 'post-header'>
 
-  <div class= 'title'>
-    <h1 class= "common-sub-title">Let's Share Your Vegan Recipes!</h1>
-  </div>
-  <div class= 'subtitle'>
-    <p>全て入力してから、[投稿する]を押してください。</p>
-  </div>
+    <div class= 'title'>
+      <h1 class= "common-sub-title">Let's Share Your Vegan Recipes!</h1>
+    </div>
+    <div class= 'subtitle'>
+      <p>全て入力してから、[投稿する]を押してください。</p>
+    </div>
 
   <%= form_with model: @recipe, local: true do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
 
-
   <div class="new-recipes">
-
     <div class="recipe-image">
       <h2>Recipe Picture</h2>
       <div class="click-upload">
@@ -32,7 +30,6 @@
       <h2>How To Cook</h2>
       <%= f.text_area :explains, class:"recipe-explain-text", id:"recipe-info", placeholder:"レシピの材料・作り方を記述してください（必須 1000文字まで)" ,rows:"7" ,maxlength:"1000" %>
     </div>
-
   </div>
 
   <div class="selections">
@@ -40,7 +37,6 @@
       <h3>難易度</h3>
       <%= f.collection_select(:level_id, Level.all, :id, :name, {prompt: "選択してください"}, {class:"select-box", id:"recipe-level"}) %>
     </div>
-
     <div class= "cookingtimes">
       <h3>調理時間</h3>
       <%= f.collection_select(:cookingtime_id, Cookingtime.all, :id, :name, {prompt: "選択してください"}, {class:"select-box", id:"reccipe-cookingtime"}) %>
@@ -52,9 +48,6 @@
     <div class="posting-btn">
       <%= f.submit "投稿する" ,class: "new-btn-text" %>
     </div>
-
   </div>
-
 </div>
-
 <% end %>
