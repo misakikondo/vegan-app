@@ -27,27 +27,27 @@
   </main>
 
 
-  <h4 class= "mypage-subtitle">いいねを押したレシピ</h4>
+  <h4 class= "mypage-subtitle">お気に入りレシピ</h4>
     <main class="main">
-    <div class="innner">
-      <div class="r-wrapper">
-        <% @user.liked_recipes.each do |recipe| %>
-        <div class= "r-list">
-          <%= link_to recipe_path(recipe.id) do %> 
-          <%= image_tag recipe.image, class: "recipe-img" %>
-          <%end%>
-          <div class="r-body">
-            <div class='r-name'>
-              <h3><%= recipe.recipes_name %></h3>
-            </div>
-            <div class="r-likes">
-              <h3>LIKE: <%= recipe.likes.count %></h3>
+      <div class="innner">
+        <div class="r-wrapper">
+          <% @user.liked_recipes.each do |recipe| %>
+          <div class= "r-list">
+            <%= link_to recipe_path(recipe.id) do %> 
+            <%= image_tag recipe.image, class: "recipe-img" %>
+            <%end%>
+            <div class="r-body">
+              <div class='r-name'>
+                <h3><%= recipe.recipes_name %></h3>
+              </div>
+              <div class="r-likes">
+                <h3>LIKE: <%= recipe.likes.count %></h3>
+              </div>
             </div>
           </div>
+          <%end%> 
         </div>
-        <%end%> 
       </div>
-    </div>
-  </main>
-
- </div>
+    </main>
+    
+</div>
