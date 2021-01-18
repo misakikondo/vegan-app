@@ -80,7 +80,7 @@ cvc number: 123
 
 
 ## ER Map  
-![er-veganapp](https://user-images.githubusercontent.com/70508952/104917911-63ac2980-59d7-11eb-9ff8-fa1c015a4217.png)  
+![er-veganapp](https://user-images.githubusercontent.com/70508952/104918231-cd2c3800-59d7-11eb-99cb-f002f5d42c79.png)  
 
 
 ## Install
